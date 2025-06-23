@@ -104,7 +104,25 @@ To prevent unnecessary, large or system-generated files (like `.DS_Store` on mac
 ```
 
 #### Step 4: Commit the Change
-A commit is a saved version of the project and it's contents. You’ll now see it in the commit graph (visual log of a repository’s history)
+A commit is a saved version of the project and it's contents. You’ll now see it in the commit graph (visual log of a repository’s history) with a unique ID called a  Secure Hash Algorithm* (**SHA**).
+
+It records:
+- What files were changed
+- How they were changed
+- When the change happened
+- Who made the change
+- A message explaining why the change was made
+
+```{dropdown} Tip: Commits
+:icon: info
+Make a new commit every time you finish a meaningful piece of work. This keeps your history clear and lets you roll back or compare changes later if needed.
+
+Good habits:
+- One commit = one purpose
+- Commit early and often, not all at once at the end
+- Use clear titles so others (and future you) understand what was changed
+```
+
 
 - In the Commit Message box, choose an informative title and description:
     e.g.: Title: add ice_cream.md
@@ -118,6 +136,22 @@ A commit is a saved version of the project and it's contents. You’ll now see i
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/updated_history.png?raw=true" alt="Init a repo" >
   <figcaption>Figure: Commit history</figcaption>
 </figure>
+
+```{dropdown} Tip: Reverting a Commit
+Reverting a commit means undoing its changes by creating a new commit that cancels them out. The original commit stays in the history.
+
+When to revert:
+- You made a mistake in a commit
+- You want to remove a change without deleting history
+
+How to do it in GitKraken:
+1. Right-click the commit in the graph (or use the Undo option for the most recent commit)
+2. Click Revert commit
+3. A new commit appears reversing the change
+4. Push to update the remote
+
+Revert is safe on shared branches. It keeps history intact and visible to collaborators.
+```
 
 
 ### Local to Remote:
