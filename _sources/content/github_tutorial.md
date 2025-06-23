@@ -187,7 +187,11 @@ Resolving conflicts ensures both sets of changes are merged without losing data.
 - Finally, commit the merge using the Commit panel, and click Push to update GitHub
 
 
-### Git for terminal wizards
+--------------------------------------------------------------------------
+
+```{dropdown} ### Git for terminal wizards
+:icon: info
+:open:
 
 Git is foremost a command line tool, therefore it is quite easy to setup and manage projects directly.
 If you are already are confident in working with the command-line interface, using pure git might be faster and more reproducible. Here are the steps above as you'd implement them. 
@@ -211,3 +215,5 @@ git remote add origin https://github.com/your-username/my-icecream_project.git
 
 ##### 6. Push to the remote (assumes your local branch is named 'main')
 git push -u origin main
+
+```

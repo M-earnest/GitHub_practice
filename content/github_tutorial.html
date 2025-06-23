@@ -421,15 +421,6 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-resolve-a-merge-conflict-in-gitkraken">Step 11: Resolve a Merge Conflict in GitKraken</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-for-terminal-wizards">Git for terminal wizards</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-project-folder">1. Create your project folder</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-a-git-repo">2. Initialize a git repo</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-your-files-to-staging-or-use-to-add-everything">3. Add your files to staging (or use ‘.’ to add everything)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-the-files">4. Commit the files</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-remote-repository-replace-with-your-github-repo-url">5. Add the remote repository (replace with your GitHub repo URL)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#push-to-the-remote-assumes-your-local-branch-is-named-main">6. Push to the remote (assumes your local branch is named ‘main’)</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -637,38 +628,28 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <li><p>Once resolved, click Mark as Resolved.</p></li>
 <li><p>Finally, commit the merge using the Commit panel, and click Push to update GitHub</p></li>
 </ul>
-</section>
-</section>
-<section id="git-for-terminal-wizards">
-<h3>Git for terminal wizards<a class="headerlink" href="#git-for-terminal-wizards" title="Permalink to this heading">#</a></h3>
-<p>Git is foremost a command line tool, therefore it is quite easy to setup and manage projects directly.
+<hr class="docutils" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">### Git for terminal wizards</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Git is foremost a command line tool, therefore it is quite easy to setup and manage projects directly.
 If you are already are confident in working with the command-line interface, using pure git might be faster and more reproducible. Here are the steps above as you’d implement them.</p>
-<section id="create-your-project-folder">
-<h4>1. Create your project folder<a class="headerlink" href="#create-your-project-folder" title="Permalink to this heading">#</a></h4>
-<p>mkdir my-icecream_project
+<h5 class="rubric" id="create-your-project-folder">1. Create your project folder</h5>
+<p class="sd-card-text">mkdir my-icecream_project
 cd my-icecream_project</p>
-</section>
-<section id="initialize-a-git-repo">
-<h4>2. Initialize a git repo<a class="headerlink" href="#initialize-a-git-repo" title="Permalink to this heading">#</a></h4>
-<p>git init</p>
-</section>
-<section id="add-your-files-to-staging-or-use-to-add-everything">
-<h4>3. Add your files to staging (or use ‘.’ to add everything)<a class="headerlink" href="#add-your-files-to-staging-or-use-to-add-everything" title="Permalink to this heading">#</a></h4>
-<p>git add .
+<h5 class="rubric" id="initialize-a-git-repo">2. Initialize a git repo</h5>
+<p class="sd-card-text">git init</p>
+<h5 class="rubric" id="add-your-files-to-staging-or-use-to-add-everything">3. Add your files to staging (or use ‘.’ to add everything)</h5>
+<p class="sd-card-text">git add .
 touch ice_cream.md</p>
-</section>
-<section id="commit-the-files">
-<h4>4. Commit the files<a class="headerlink" href="#commit-the-files" title="Permalink to this heading">#</a></h4>
-<p>git commit -m “Initial commit”</p>
-</section>
-<section id="add-the-remote-repository-replace-with-your-github-repo-url">
-<h4>5. Add the remote repository (replace with your GitHub repo URL)<a class="headerlink" href="#add-the-remote-repository-replace-with-your-github-repo-url" title="Permalink to this heading">#</a></h4>
-<p>git remote add origin <a class="github reference external" href="https://github.com/your-username/my-icecream_project.git">your-username/my-icecream_project.git</a></p>
-</section>
-<section id="push-to-the-remote-assumes-your-local-branch-is-named-main">
-<h4>6. Push to the remote (assumes your local branch is named ‘main’)<a class="headerlink" href="#push-to-the-remote-assumes-your-local-branch-is-named-main" title="Permalink to this heading">#</a></h4>
-<p>git push -u origin main</p>
-</section>
+<h5 class="rubric" id="commit-the-files">4. Commit the files</h5>
+<p class="sd-card-text">git commit -m “Initial commit”</p>
+<h5 class="rubric" id="add-the-remote-repository-replace-with-your-github-repo-url">5. Add the remote repository (replace with your GitHub repo URL)</h5>
+<p class="sd-card-text">git remote add origin <a class="github reference external" href="https://github.com/your-username/my-icecream_project.git">your-username/my-icecream_project.git</a></p>
+<h5 class="rubric" id="push-to-the-remote-assumes-your-local-branch-is-named-main">6. Push to the remote (assumes your local branch is named ‘main’)</h5>
+<p class="sd-card-text">git push -u origin main</p>
+</div>
+</details></section>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -750,15 +731,6 @@ touch ice_cream.md</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-pull-changes-from-github-remote-to-local">Step 9: Pull Changes from GitHub remote to local</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-creating-conflicts">Step 10: Creating Conflicts</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-resolve-a-merge-conflict-in-gitkraken">Step 11: Resolve a Merge Conflict in GitKraken</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-for-terminal-wizards">Git for terminal wizards</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-project-folder">1. Create your project folder</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-a-git-repo">2. Initialize a git repo</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-your-files-to-staging-or-use-to-add-everything">3. Add your files to staging (or use ‘.’ to add everything)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-the-files">4. Commit the files</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-remote-repository-replace-with-your-github-repo-url">5. Add the remote repository (replace with your GitHub repo URL)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#push-to-the-remote-assumes-your-local-branch-is-named-main">6. Push to the remote (assumes your local branch is named ‘main’)</a></li>
 </ul>
 </li>
 </ul>
