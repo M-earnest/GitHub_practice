@@ -73,7 +73,7 @@ This creates a local Git repository. GitKraken automatically tracks changes in t
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/init_repo.png?raw=true" alt="Init a repo" width="600" height="400">
   <figcaption>Figure: Initializing a new GitHub repository </figcaption>
 </figure>
-screenshot - init_repo
+
 
 #### Step 2: Add a File to Your Project
 - Open the folder in file explorer/terminal.
@@ -115,6 +115,13 @@ We'll first create a "remote" version of the repository to push our changes to.
 - Copy the URL (e.g., https://github.com/yourusername/repo_name.git)
 
 screenshot - create_repo
+
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/create_repo.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Initializing a new GitHub repository </figcaption>
+</figure>
+
+
 
 #### Step 6: Connect GitKraken to the Remote Repository
 Back in GitKraken:
