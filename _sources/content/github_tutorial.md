@@ -70,7 +70,7 @@ In this section, you’ll learn how to create a Git repository using GitKraken, 
 This creates a local Git repository. GitKraken automatically tracks changes in that initialized folder. You’ll now see the main branch and an empty commit history.
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/init_repo.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/init_repo.png?raw=true" alt="Init a repo" width="200" height="600">
   <figcaption>Figure: Initializing a new GitHub repository </figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ In GitKraken:
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/staging.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/staging.png?raw=true" alt="Init a repo" width="200" height="600">
   <figcaption>Figure: Staging changes </figcaption>
 </figure>
 
@@ -126,7 +126,7 @@ We'll first create a "remote" version of the repository to push our changes to.
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/create_repo.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/create_repo.png?raw=true" alt="Init a repo" width="600" height="500">
   <figcaption>Figure: Initializing a new GitHub repository </figcaption>
 </figure>
 
@@ -183,7 +183,7 @@ Now let's see what happens if the changes to a certain file do not match between
 - Click the ✏️ Edit button, make a small change (e.g., add a new ice cream flavor), and commit directly to the main branch
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/edit_online.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/edit_online.png?raw=true" alt="Init a repo" width="800" height="200">
 </figure>
 
 **Local Edit**
@@ -198,7 +198,7 @@ Now let's see what happens if the changes to a certain file do not match between
  
  
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="300">
   <figcaption>Figure: Conflict warning </figcaption>
 </figure>
 
@@ -222,7 +222,7 @@ Resolving conflicts ensures both sets of changes are merged without losing data.
 
  
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/merge_conflict.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/merge_conflict.png?raw=true" alt="Init a repo" width="400" height="200">
   <figcaption>Figure: Resolving merge conflicts offline </figcaption>
 </figure>
 
