@@ -10,14 +10,14 @@ A distributed version-control system (Git) hosted on a collaboration platform (G
 ### Why Git and GitHub?
 
 
-Git as a version control system :
+**Git as a version control system:**
 - tracks exactly what was changed, when, and by whom.
 - creates a complete lineage of changes across branches, forks and collaborators, i.e the “commit history”
 - gives the ability to revert/review the state of a project to any past point in time
 - command line based or integration with tools like GitKraken for visual workflows.
 
 
-GitHub builds on Git to support:
+**GitHub builds on Git to support:**
 - Secure cloud-based backup and access
 - Collaboration through branching, pull requests, code reviews.
 - Issue tracking and project management.
@@ -50,13 +50,6 @@ Creates a personal copy of someone else's repository on your GitHub account. Use
 **Branch**  
 A parallel version of the project where you can develop features or fixes without affecting the main code. Useful for working on isolated changes.
 
-**Checkout**  
-Switches your working directory to a different branch or commit. Use this to move between different lines of development.
-
-**Fetch**  
-Downloads the latest changes from a remote repository, but does **not** merge them into your local branches. Useful for reviewing remote activity before applying it.
-
-
 ```
 
 
@@ -64,7 +57,7 @@ Downloads the latest changes from a remote repository, but does **not** merge th
 
 Let's jump into practice. We'll learn the relevant functions and terms along the way. 
 
-**Goal**
+**Goal:**
 In this section, you’ll learn how to create a Git repository using GitKraken, make your first commit, and push it to GitHub. 
 
 
@@ -73,9 +66,10 @@ In this section, you’ll learn how to create a Git repository using GitKraken, 
 - In the left sidebar, click + → Init Repo
 - Create or select a folder on your machine for tracking, e.g. your Desktop 
 - Name the repo 'my-icecream_project' and confirm
-
-
+  
 This creates a local Git repository. GitKraken automatically tracks changes in that initialized folder. You’ll now see the main branch and an empty commit history.
+
+screenshot - init_repo
 
 #### Step 2: Add a File to Your Project
 - Open the folder in file explorer/terminal.
@@ -89,7 +83,7 @@ Staging gives you control over what file/change to include in each commit-snapsh
 In GitKraken:
 - Click the checkbox next to README.md to stage it
 
-
+screenshot - staging
 #### Step 4: Commit the Change
 A commit is a saved version of the project and it's contents. You’ll now see it in the commit graph (visual log of a repository’s history)
 
@@ -100,6 +94,7 @@ A commit is a saved version of the project and it's contents. You’ll now see i
 - Click Commit Changes
 - Rinse and repeat for every new, meaningful change
 
+screenshot - comitting
 
 ### Local to Remote:
 
@@ -109,18 +104,22 @@ Now this is where we would stop if we would just like work on our own system. Fo
 We'll first create a "remote" version of the repository to push our changes to.
 
 - Go to https://github.com
-- Click "New Repository"
+- click + → "New Repository"
 - Give it the same name as your local repository
 - Leave it empty (no README or license)
 - Click Create Repository
 - Copy the URL (e.g., https://github.com/yourusername/repo_name.git)
 
+screenshot - create_repo
 
 #### Step 6: Connect GitKraken to the Remote Repository
 Back in GitKraken:
 - In the left panel, click Remote → Add Remote
 - Name it origin (conventional default)
-- Paste the GitHub URL, confirm
+- Paste the GitHub URL, confir
+
+
+screenshot - add_remote
 
 #### Step 7: Push to GitHub
 - Click the Push button (top toolbar).
@@ -128,6 +127,8 @@ Back in GitKraken:
 - Push your main branch to the origin remote.
 
 The push sends your local commits to GitHub. You now have a fully synchronized local–remote setup.
+
+--------------------------------------------------------------------------
 
 
 ### Version Control and conflicts
@@ -146,6 +147,7 @@ This edits the file directly on GitHub and creates a new commit in your remote r
 
 #### Step 9: Pull Changes from GitHub remote to local
 - In GitKraken, simply click the Pull button (top toolbar)
+- your commit history will be updated with the new changes + information where these changes stem from (i.e. the remote repository)
 - profit??
 
 
@@ -157,6 +159,7 @@ Now let's see what happens if the changes to a certain file do not match between
 - Go to your repository on GitHub.com and open ice_cream.md
 - Click the ✏️ Edit button, make a small change (e.g., add a new ice cream flavor), and commit directly to the main branch
 
+screenshot - edit_online
 
 **Local Edit**
 - Without pulling the remote change, open ice_cream.md locally and make a different change to the same section of the file
@@ -167,16 +170,18 @@ Now let's see what happens if the changes to a certain file do not match between
 - In GitKraken, click the Pull button.
 - GitKraken will detect the conflicting changes and show a merge conflict notification
 
+ 
+ screenshot conflict_warning
+
 #### Step 11: Resolve a Merge Conflict in GitKraken
 
 Resolving conflicts ensures both sets of changes are merged without losing data. GitKraken’s visual tools make this process easier to understand and control.
 
-- In the left panel, click the conflicted file ice_cream.md.
+- In the right panel, click the conflicted file ice_cream.md.
 - GitKraken will open a 3-way merge editor:
     - The left side shows your local changes.
     - The right side shows the incoming changes from GitHub.
     - The middle area is where you choose how to resolve the conflict.
-
 
 - Use the interface to:
     - Accept one side,
@@ -186,7 +191,7 @@ Resolving conflicts ensures both sets of changes are merged without losing data.
 - Once resolved, click Mark as Resolved.
 - Finally, commit the merge using the Commit panel, and click Push to update GitHub
 
-
+- screenshot merge_conflict
 --------------------------------------------------------------------------
 
 ```{dropdown} ### Git for terminal wizards
