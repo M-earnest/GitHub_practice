@@ -185,6 +185,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Collaboration using GitHub</a></li>
 
 
+
 </ul>
 
     </div>
@@ -397,7 +398,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Collaboration using GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Collaboration using GitHub</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goal">Goal:</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-collaboration">Practice - Collaboration</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-host-shares-repo">Step 1: Host shares repo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-contributor-forks-and-clones">Step 2: Contributor Forks and Clones</a></li>
@@ -408,6 +412,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-resolving-conflicts">Step 7: Resolving conflicts</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshot-resolve-pr">screenshot - resolve_pr</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content-managing-projects-via-github">Additional content - Managing projects via GitHub</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-project-managment">Practice - Project managment</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-collaborators-to-a-project">Adding Collaborators to a Project</a></li>
@@ -433,22 +438,13 @@ document.write(`
 <h1>Collaboration using GitHub<a class="headerlink" href="#collaboration-using-github" title="Permalink to this heading">#</a></h1>
 <p>In the previous lesson, we set up a repository, used Git for version control, and learned how to push and pull changes between our local and remote repositories on GitHub.</p>
 <p>The next step: using GitHub to collaborate on a shared project.</p>
-<p><strong>Goal</strong></p>
+<section id="goal">
+<h2>Goal:<a class="headerlink" href="#goal" title="Permalink to this heading">#</a></h2>
 <p>We’ll learn how multiple people can contribute to the same project, either by creating branches within a single repository or by forking and working across separate repositories. We’ll explore how to propose and manage changes through pull requests, and how to track tasks and ideas using issues and project boards.</p>
 <p>To practice, we’ll each contribute to a shared project using forks, pull requests, and issues, simulating real-world collaboration workflows.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-git-branch" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path></svg></span><span class="sd-summary-text">Branching vs Forking</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Branching: internal collaboration</strong><br />
-Use when you’re working within a shared repository, e.g., in a lab where all members have write access.<br />
-Each person creates a branch (e.g., <code class="docutils literal notranslate"><span class="pre">alice-new-stats</span></code>) and pushes it to the shared GitHub repo.<br />
-Changes are proposed via pull requests.</p>
-<p class="sd-card-text"><strong>Forking: external collaboration</strong><br />
-Use when you don’t have write access to the original repo — e.g., contributing to another lab’s codebase or to public tools.<br />
-You click <strong>Fork</strong> on GitHub, which creates a copy of the repo under your own account.<br />
-You clone your fork, work on it, push changes, and create a pull request back to the original repo.</p>
-</div>
-</details></section>
+<hr class="docutils" />
+</section>
+</section>
 <section id="practice-collaboration">
 <h1>Practice - Collaboration<a class="headerlink" href="#practice-collaboration" title="Permalink to this heading">#</a></h1>
 <p>Pair up with the person next to you. Decide who will be the host and who will be the contributor. We’ll find out who has the best taste in ice cream?</p>
@@ -475,6 +471,7 @@ You clone your fork, work on it, push changes, and create a pull request back to
 </ul>
 </li>
 </ul>
+<p>screenshot - fork_repo</p>
 <p>You’re redirected to your new fork:
 <a class="github reference external" href="https://github.com/your-username/ice-cream-prefs">your-username/ice-cream-prefs</a></p>
 <ul class="simple">
@@ -485,8 +482,21 @@ You clone your fork, work on it, push changes, and create a pull request back to
 <li><p>Choose a folder to save it locally</p></li>
 <li><p>Click Clone the repo</p></li>
 </ul>
+<p>screenshot - clone_repo</p>
 <p>You now have a local copy of the forked repo, ready to work on.</p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-git-branch" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path></svg></span><span class="sd-summary-text">Branching vs Forking</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Branching: internal collaboration</strong><br />
+Use when you’re working within a shared repository, e.g., in a lab where all members have write access.<br />
+Each person creates a branch (e.g., <code class="docutils literal notranslate"><span class="pre">alice-new-stats</span></code>) and pushes it to the shared GitHub repo.<br />
+Changes are proposed via pull requests.</p>
+<p class="sd-card-text"><strong>Forking: external collaboration</strong><br />
+Use when you don’t have write access to the original repo — e.g., contributing to another lab’s codebase or to public tools.<br />
+You click <strong>Fork</strong> on GitHub, which creates a copy of the repo under your own account.<br />
+You clone your fork, work on it, push changes, and create a pull request back to the original repo.</p>
+</div>
+</details></section>
 <section id="step-3-contributor-makes-and-commits-changes">
 <h2>Step 3: Contributor makes and commits changes<a class="headerlink" href="#step-3-contributor-makes-and-commits-changes" title="Permalink to this heading">#</a></h2>
 <p>Next, we want to to contribut to this cool project we’ve found. As we are naturally unbiased in our assesments, we will improve the ranking by the original author.</p>
@@ -508,6 +518,8 @@ You clone your fork, work on it, push changes, and create a pull request back to
 <li><p>GitHub should show a banner that says “Compare &amp; pull request”. Click it</p></li>
 <li><p>Confirm that the pull request will go from your fork to the host’s main repository</p></li>
 <li><p>Fill in the pull request form: Add a meaningful title + desription</p></li>
+<li><p>screenshot - open_pr</p></li>
+<li><p>screenshot - pull_request</p></li>
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
@@ -542,6 +554,7 @@ Short description of the change.</p>
 <li><p>This means the same file was changed in both the fork and the main repo</p></li>
 </ul>
 <p>At this point, do not merge the pull request yet. Instead, we’ll use this as an opportunity to review the conflict and prepare to resolve it.</p>
+<p>screenshot - merge_conflict</p>
 </section>
 <section id="step-7-resolving-conflicts">
 <h2>Step 7: Resolving conflicts<a class="headerlink" href="#step-7-resolving-conflicts" title="Permalink to this heading">#</a></h2>
@@ -556,6 +569,7 @@ Short description of the change.</p>
 <span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="n">fork</span><span class="o">-</span><span class="n">branch</span>
 </pre></div>
 </div>
+<p>screenshot - resolve_conflict</p>
 <p>We’ll edit the file to combine both changes into a clean, final version, remove the conflict markers and make sure the file looks correct.</p>
 <p>Once you’re done:</p>
 <ul class="simple">
@@ -564,6 +578,9 @@ Short description of the change.</p>
 <li><p>Finally, click “Merge pull request” and confirm the merge</p></li>
 </ul>
 </section>
+</section>
+<section id="screenshot-resolve-pr">
+<h1>screenshot - resolve_pr<a class="headerlink" href="#screenshot-resolve-pr" title="Permalink to this heading">#</a></h1>
 </section>
 <section id="additional-content-managing-projects-via-github">
 <h1>Additional content - Managing projects via GitHub<a class="headerlink" href="#additional-content-managing-projects-via-github" title="Permalink to this heading">#</a></h1>
@@ -581,6 +598,7 @@ Short description of the change.</p>
 <li><p>In Review – code under review or waiting for feedback</p></li>
 <li><p>Done – completed tasks</p></li>
 </ul>
+<p>screenshot - project_card</p>
 <p>Each item on the board can be:</p>
 <ul class="simple">
 <li><p>GitHub issue (bug, feature, task)</p></li>
@@ -605,6 +623,9 @@ Short description of the change.</p>
 <ol class="arabic simple">
 <li><p>Open the project page</p></li>
 <li><p>Click <strong>Settings</strong> → <strong>Collaborators</strong></p></li>
+</ol>
+<p>screenshot - project_settings</p>
+<ol class="arabic simple" start="3">
 <li><p>Add members of your organization by typing their GitHub username</p></li>
 <li><p>Assign permissions:</p>
 <ul class="simple">
@@ -720,7 +741,10 @@ Short description of the change.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Collaboration using GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Collaboration using GitHub</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goal">Goal:</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-collaboration">Practice - Collaboration</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-host-shares-repo">Step 1: Host shares repo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-contributor-forks-and-clones">Step 2: Contributor Forks and Clones</a></li>
@@ -731,6 +755,7 @@ Short description of the change.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-resolving-conflicts">Step 7: Resolving conflicts</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshot-resolve-pr">screenshot - resolve_pr</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content-managing-projects-via-github">Additional content - Managing projects via GitHub</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-project-managment">Practice - Project managment</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-collaborators-to-a-project">Adding Collaborators to a Project</a></li>
