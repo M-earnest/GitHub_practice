@@ -4,26 +4,13 @@ In the previous lesson, we set up a repository, used Git for version control, an
 
 The next step: using GitHub to collaborate on a shared project.
 
-**Goal**
+### Goal:
 
 We’ll learn how multiple people can contribute to the same project, either by creating branches within a single repository or by forking and working across separate repositories. We’ll explore how to propose and manage changes through pull requests, and how to track tasks and ideas using issues and project boards.
 
 To practice, we’ll each contribute to a shared project using forks, pull requests, and issues, simulating real-world collaboration workflows.
 
-```{dropdown} Branching vs Forking
-:icon: git-branch
-:open:
-
-**Branching: internal collaboration**  
-Use when you’re working within a shared repository, e.g., in a lab where all members have write access.  
-Each person creates a branch (e.g., `alice-new-stats`) and pushes it to the shared GitHub repo.  
-Changes are proposed via pull requests.
-
-**Forking: external collaboration**  
-Use when you don’t have write access to the original repo — e.g., contributing to another lab’s codebase or to public tools.  
-You click **Fork** on GitHub, which creates a copy of the repo under your own account.  
-You clone your fork, work on it, push changes, and create a pull request back to the original repo.
-```
+--------------------------------------------------------------------------
 
 
 ## Practice - Collaboration
@@ -47,6 +34,8 @@ Each participant should already have a file ice_cream.md in their repo, containi
 - In the top-right, click the “Fork” button.
     - GitHub will create a copy of the repo under your own username.
 
+screenshot - fork_repo
+
 You’re redirected to your new fork:
  https://github.com/your-username/ice-cream-prefs
 
@@ -57,8 +46,25 @@ You’re redirected to your new fork:
 - Choose a folder to save it locally
 - Click Clone the repo
 
+screenshot - clone_repo
+
 
 You now have a local copy of the forked repo, ready to work on.
+
+```{dropdown} Branching vs Forking
+:icon: git-branch
+:open:
+
+**Branching: internal collaboration**  
+Use when you’re working within a shared repository, e.g., in a lab where all members have write access.  
+Each person creates a branch (e.g., `alice-new-stats`) and pushes it to the shared GitHub repo.  
+Changes are proposed via pull requests.
+
+**Forking: external collaboration**  
+Use when you don’t have write access to the original repo — e.g., contributing to another lab’s codebase or to public tools.  
+You click **Fork** on GitHub, which creates a copy of the repo under your own account.  
+You clone your fork, work on it, push changes, and create a pull request back to the original repo.
+```
 
 ### Step 3: Contributor makes and commits changes
 
@@ -68,13 +74,11 @@ There are two ways to do this, either the proper way as described below or, as w
 
 A fork is your own indepenent copy of another repository on GitHub, letting you experiment and make changes without affecting the original project.
 
-
 - Open the local folder of the cloned fork
 - Edit the ice_cream.md file. Replace the three flavors with your own favorites, change the ranking, leave a comment
 - Save the file
 - In GitKraken, stage and commit with an informative message, e,g. updated rankings, added actually good flavors
 - Push your changes to GitHub.
-
 
 ### Step 4: Contributor opens a pull request
 
@@ -84,6 +88,10 @@ A pull request lets you propose changes from your fork back to the original repo
 - GitHub should show a banner that says "Compare & pull request". Click it
 - Confirm that the pull request will go from your fork to the host’s main repository
 - Fill in the pull request form: Add a meaningful title + desription
+
+- screenshot - open_pr
+
+- screenshot - pull_request
 
 
 ```{dropdown} Pull Request Template
@@ -116,6 +124,8 @@ While the pull request is still open:
 
 At this point, do not merge the pull request yet. Instead, we'll use this as an opportunity to review the conflict and prepare to resolve it.
 
+screenshot - merge_conflict
+
 ### Step 7: Resolving conflicts
 - Click "Resolve conflicts".
 
@@ -129,6 +139,9 @@ contributor's version
 >>>>>>> fork-branch
 ```
 
+
+screenshot - resolve_conflict
+
 We'll edit the file to combine both changes into a clean, final version, remove the conflict markers and make sure the file looks correct.
 
 Once you're done:
@@ -136,6 +149,9 @@ Once you're done:
 - Click "Commit merge"
 - Finally, click "Merge pull request" and confirm the merge
 
+
+screenshot - resolve_pr
+--------------------------------------------------------------------------
 
 ## Additional content - Managing projects via GitHub
 
@@ -153,6 +169,9 @@ Projects are usually organized as boards with columns. The default setup looks l
 - In Progress – work currently being done
 - In Review – code under review or waiting for feedback
 - Done – completed tasks
+
+screenshot - project_card
+
 
 Each item on the board can be:
 - GitHub issue (bug, feature, task)
@@ -173,6 +192,9 @@ Creating a new project:
 
 1. Open the project page
 2. Click **Settings** → **Collaborators**
+
+screenshot - project_settings
+
 3. Add members of your organization by typing their GitHub username
 4. Assign permissions:
    - **Read** – View project but no edits
