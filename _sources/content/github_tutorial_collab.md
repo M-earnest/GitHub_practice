@@ -139,7 +139,7 @@ At this point, do not merge the pull request yet. Instead, we'll use this as an 
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/merge_conflict.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/merge_conflict.png?raw=true" alt="Init a repo">
   <figcaption>Figure: Merge conflict warning </figcaption>
 </figure>
 
@@ -160,8 +160,8 @@ contributor's version
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/resolve_merge.png?raw=true" alt="Init a repo" width="600" height="400">
-  <figcaption>Figure: Merge conflict warning </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/resolve_merge.png?raw=true" alt="Init a repo">
+  <figcaption>Figure: Resolving a merge conflict </figcaption>
 </figure>
 
 
@@ -176,7 +176,6 @@ Once you're done:
 
 <figure>
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/resolve_pr.png?raw=true" alt="Init a repo">
-  <figcaption>Figure: Merge conflict warning </figcaption>
 </figure>
 
 --------------------------------------------------------------------------
