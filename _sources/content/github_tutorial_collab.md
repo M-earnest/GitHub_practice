@@ -59,7 +59,6 @@ You now have a local copy of the forked repo, ready to work on.
 
 ```{dropdown} Branching vs Forking
 :icon: git-branch
-:open:
 
 **Branching: internal collaboration**  
 Use when you’re working within a shared repository, e.g., in a lab where all members have write access.  
