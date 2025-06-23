@@ -198,8 +198,8 @@ Now let's see what happens if the changes to a certain file do not match between
  
  
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="200">
-  <figcaption>Figure: Conflict warning </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="300">
+  <figcaption>Figure: Conflict resolution view </figcaption>
 </figure>
 
 #### Step 11: Resolve a Merge Conflict in GitKraken
@@ -228,31 +228,31 @@ Resolving conflicts ensures both sets of changes are merged without losing data.
 
 --------------------------------------------------------------------------
 
-```{dropdown} ### Git for terminal wizards
+```{dropdown} Git for terminal wizards
 :icon: info
 :open:
 
 Git is foremost a command line tool, therefore it is quite easy to setup and manage projects directly.
 If you are already are confident in working with the command-line interface, using pure git might be faster and more reproducible. Here are the steps above as you'd implement them. 
 
-##### 1. Create your project folder
+1. Create your project folder
 mkdir my-icecream_project
 cd my-icecream_project
 
-##### 2. Initialize a git repo
+2. Initialize a git repo
 git init
 
-##### 3. Add your files to staging (or use '.' to add everything)
+3. Add your files to staging (or use '.' to add everything)
 git add .
 touch ice_cream.md
 
-##### 4. Commit the files
+4. Commit the files
 git commit -m "Initial commit"
 
-##### 5. Add the remote repository (replace with your GitHub repo URL)
+5. Add the remote repository (replace with your GitHub repo URL)
 git remote add origin https://github.com/your-username/my-icecream_project.git
 
-##### 6. Push to the remote (assumes your local branch is named 'main')
+6. Push to the remote (assumes your local branch is named 'main')
 git push -u origin main
 
 ```
