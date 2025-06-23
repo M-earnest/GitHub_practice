@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Collaboration using GitHub &#8212; Course Template for ressources in higher education</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/github_tutorial_collab';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Git, GitHub and your machine" href="github_tutorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="github_tutorial.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Course Template for ressources in higher education - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Course Template for ressources in higher education - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="github_tutorial.html">
+                    Git, GitHub and your machine
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Collaboration using GitHub</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/M-earnest/course_template_diler" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/M-earnest/course_template_diler/edit/master/lecture/content/github_tutorial_collab.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/M-earnest/course_template_diler/issues/new?title=Issue%20on%20page%20%2Fcontent/github_tutorial_collab.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/github_tutorial_collab.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Collaboration using GitHub</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Collaboration using GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-contributor-makes-and-commits-changes">Step 3: Contributor makes and commits changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-contributor-opens-a-pull-request">Step 4: Contributor opens a pull request</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-host-makes-changes-to-the-original-repo">Step 5: Host makes changes to the original repo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-review-the-pull-request-before-merging">Step 6: Review the pull request (before merging)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-resolving-conflicts">Step 7: Resolving conflicts</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-host-s-version">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+host’s version</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content-managing-projects-via-github">Additional content - Managing projects via GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-project-managment">Practice - Project managment</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="collaboration-using-github">
+<h1>Collaboration using GitHub<a class="headerlink" href="#collaboration-using-github" title="Permalink to this heading">#</a></h1>
+<p>In the previous lesson, we set up a repository, used Git for version control, and learned how to push and pull changes between our local and remote repositories on GitHub.</p>
+<p>The next step: using GitHub to collaborate on a shared project.</p>
+<p><strong>Goal</strong></p>
+<p>We’ll learn how multiple people can contribute to the same project, either by creating branches within a single repository or by forking and working across separate repositories. We’ll explore how to propose and manage changes through pull requests, and how to track tasks and ideas using issues and project boards.</p>
+<p>To practice, we’ll each contribute to a shared project using forks, pull requests, and issues, simulating real-world collaboration workflows.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-git-branch" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path></svg></span><span class="sd-summary-text">Branching vs Forking</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Branching: internal collaboration</strong><br />
+Use when you’re working within a shared repository, e.g., in a lab where all members have write access.<br />
+Each person creates a branch (e.g., <code class="docutils literal notranslate"><span class="pre">alice-new-stats</span></code>) and pushes it to the shared GitHub repo.<br />
+Changes are proposed via pull requests.</p>
+<p class="sd-card-text"><strong>Forking: external collaboration</strong><br />
+Use when you don’t have write access to the original repo — e.g., contributing to another lab’s codebase or to public tools.<br />
+You click <strong>Fork</strong> on GitHub, which creates a copy of the repo under your own account.<br />
+You clone your fork, work on it, push changes, and create a pull request back to the original repo.</p>
+</div>
+</details></section>
+<section id="practice">
+<h1>Practice<a class="headerlink" href="#practice" title="Permalink to this heading">#</a></h1>
+<p>Pair up with the person next to you. Decide who will be the host and who will be the contributor. We’ll find out who has the best taste in ice cream?</p>
+<p>Each participant should already have a file ice_cream.md in their repo, containing something like:
+1.Pistachio
+2.Vanilla
+3.Chocolate</p>
+<p>Step 1: Host shares repo</p>
+<ul class="simple">
+<li><p>On GitHub:</p></li>
+<li><p>Go to <a class="github reference external" href="https://github.com/your-username">your-username</a></p></li>
+<li><p>Open your repo (e.g., ice-cream-prefs)</p></li>
+<li><p>Copy the URL and send it to your partner (Contributor)</p></li>
+</ul>
+<p>Step 2: Contributor Forks and Clones</p>
+<ul class="simple">
+<li><p>Open the Host’s GitHub repo in your browser.</p></li>
+<li><p>In the top-right, click the “Fork” button.</p>
+<ul>
+<li><p>GitHub will create a copy of the repo under your own username.</p></li>
+</ul>
+</li>
+</ul>
+<p>You’re redirected to your new fork:
+<a class="github reference external" href="https://github.com/your-username/ice-cream-prefs">your-username/ice-cream-prefs</a></p>
+<ul class="simple">
+<li><p>In GitKraken:</p></li>
+<li><p>Click + (top left) → Clone Repo</p></li>
+<li><p>Choose <a class="reference external" href="http://GitHub.com">GitHub.com</a> → Your Repositories</p></li>
+<li><p>Select your forked repo (E.g. ice-cream-prefs)</p></li>
+<li><p>Choose a folder to save it locally</p></li>
+<li><p>Click Clone the repo</p></li>
+</ul>
+<p>You now have a local copy of the forked repo, ready to work on.</p>
+<section id="step-3-contributor-makes-and-commits-changes">
+<h2>Step 3: Contributor makes and commits changes<a class="headerlink" href="#step-3-contributor-makes-and-commits-changes" title="Permalink to this heading">#</a></h2>
+<p>Next, we want to to contribut to this cool project we’ve found. As we are naturally unbiased in our assesments, we will improve the ranking by the original author.</p>
+<p>There are two ways to do this, either the proper way as described below or, as we are working with Markdown files, edit the file directly in the browser. Either way, we will first be creating a fork of the repo in question.</p>
+<p>A fork is your own indepenent copy of another repository on GitHub, letting you experiment and make changes without affecting the original project.</p>
+<ul class="simple">
+<li><p>Open the local folder of the cloned fork</p></li>
+<li><p>Edit the ice_cream.md file. Replace the three flavors with your own favorites, change the ranking, leave a comment</p></li>
+<li><p>Save the file</p></li>
+<li><p>In GitKraken, stage and commit with an informative message, e,g. updated rankings, added actually good flavors</p></li>
+<li><p>Push your changes to GitHub.</p></li>
+</ul>
+</section>
+<section id="step-4-contributor-opens-a-pull-request">
+<h2>Step 4: Contributor opens a pull request<a class="headerlink" href="#step-4-contributor-opens-a-pull-request" title="Permalink to this heading">#</a></h2>
+<p>A pull request lets you propose changes from your fork back to the original repository so they can be reviewed, discussed, and merged.</p>
+<ul class="simple">
+<li><p>Go to your forked repository on GitHub</p></li>
+<li><p>GitHub should show a banner that says “Compare &amp; pull request”. Click it</p></li>
+<li><p>Confirm that the pull request will go from your fork to the host’s main repository</p></li>
+<li><p>Fill in the pull request form: Add a meaningful title + desription</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-checklist" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"></path></svg></span><span class="sd-summary-text">Pull Request Template</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Summary</strong><br />
+Short description of the change.</p>
+<p class="sd-card-text"><strong>Details</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">What you did</p></li>
+<li><p class="sd-card-text">Why you did it</p></li>
+<li><p class="sd-card-text">Any notes on edge cases, testing, or unresolved questions</p></li>
+</ul>
+<p class="sd-card-text"><strong>Next steps</strong> (optional)</p>
+<ul class="simple">
+<li><p class="sd-card-text">What needs to happen after this PR (e.g., testing, further improvements)</p></li>
+</ul>
+</div>
+</details></section>
+<section id="step-5-host-makes-changes-to-the-original-repo">
+<h2>Step 5: Host makes changes to the original repo<a class="headerlink" href="#step-5-host-makes-changes-to-the-original-repo" title="Permalink to this heading">#</a></h2>
+<p>While the pull request is still open:</p>
+<ul class="simple">
+<li><p>The host edits their own ice_cream.md file and changes one or more flavors.</p></li>
+<li><p>Save the file, commit the change, and push it to GitHub.</p></li>
+</ul>
+</section>
+<section id="step-6-review-the-pull-request-before-merging">
+<h2>Step 6: Review the pull request (before merging)<a class="headerlink" href="#step-6-review-the-pull-request-before-merging" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Go back to the pull request page on the host’s repository</p></li>
+<li><p>Notice that GitHub now shows “This branch has conflicts that must be resolved”</p></li>
+<li><p>This means the same file was changed in both the fork and the main repo</p></li>
+</ul>
+<p>At this point, do not merge the pull request yet. Instead, we’ll use this as an opportunity to review the conflict and prepare to resolve it.</p>
+</section>
+<section id="step-7-resolving-conflicts">
+<h2>Step 7: Resolving conflicts<a class="headerlink" href="#step-7-resolving-conflicts" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Click “Resolve conflicts”.</p></li>
+</ul>
+<p>GitHub will show the file with conflict markers like:</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="head-host-s-version">
+<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+host’s version<a class="headerlink" href="#head-host-s-version" title="Permalink to this heading">#</a></h1>
+<p>contributor’s version</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>fork-branch</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>We’ll edit the file to combine both changes into a clean, final version, remove the conflict markers and make sure the file looks correct.</p>
+<p>Once you’re done:</p>
+<ul class="simple">
+<li><p>Click “Mark as resolved”</p></li>
+<li><p>Click “Commit merge”</p></li>
+<li><p>Finally, click “Merge pull request” and confirm the merge</p></li>
+</ul>
+<section id="additional-content-managing-projects-via-github">
+<h2>Additional content - Managing projects via GitHub<a class="headerlink" href="#additional-content-managing-projects-via-github" title="Permalink to this heading">#</a></h2>
+<p>GitHub Projects is a built-in tool for planning and tracking work. It helps you organize tasks, features, and bugs directly alongside your code. You can think of it as GitHub’s alternative to tools like Trello or Jira.</p>
+<ul class="simple">
+<li><p>What You Can Do with Projects</p>
+<ul>
+<li><p>Break your work into tasks or issues</p></li>
+<li><p>Visualize progress using boards, tables, or timelines</p></li>
+<li><p>Assign tasks to collaborators</p></li>
+<li><p>Track pull requests and issues in one place</p></li>
+<li><p>Set priorities and due dates</p></li>
+</ul>
+</li>
+</ul>
+<p>Projects are usually organized as boards with columns. The default setup looks like the following, but can be freely changed:</p>
+<ul class="simple">
+<li><p>To Do – upcoming tasks</p></li>
+<li><p>In Progress – work currently being done</p></li>
+<li><p>In Review – code under review or waiting for feedback</p></li>
+<li><p>Done – completed tasks</p></li>
+</ul>
+<p>Each item on the board can be:</p>
+<ul class="simple">
+<li><p>GitHub issue (bug, feature, task)</p></li>
+<li><p>pull request</p></li>
+<li><p>notes, i.e. ideas or reminders</p></li>
+</ul>
+</section>
+<section id="practice-project-managment">
+<h2>Practice - Project managment<a class="headerlink" href="#practice-project-managment" title="Permalink to this heading">#</a></h2>
+<p>Creating a new project:</p>
+<ul class="simple">
+<li><p>Go to your repository on GitHub or click on the three bars indicating a dropdown menu at the top-left.</p>
+<ul>
+<li><p>Click Projects</p></li>
+<li><p>Click New Project</p></li>
+<li><p>Choose a layout: Board, Table, or Roadmap</p></li>
+<li><p>Name your project and set up columns or views as needed</p></li>
+</ul>
+</li>
+</ul>
+<p>Adding Items to a Project:</p>
+<ul class="simple">
+<li><p>From the project board: click + Add item</p></li>
+<li><p>From an issue or pull request: use the Projects dropdown on the sidebar</p></li>
+<li><p>From inside the project: link existing issues or PRs</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="github_tutorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Git, GitHub and your machine</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Collaboration using GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-contributor-makes-and-commits-changes">Step 3: Contributor makes and commits changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-contributor-opens-a-pull-request">Step 4: Contributor opens a pull request</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-host-makes-changes-to-the-original-repo">Step 5: Host makes changes to the original repo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-review-the-pull-request-before-merging">Step 6: Review the pull request (before merging)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-resolving-conflicts">Step 7: Resolving conflicts</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-host-s-version">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+host’s version</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content-managing-projects-via-github">Additional content - Managing projects via GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-project-managment">Practice - Project managment</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Ernst, Felix Körber based on the Gorella template by Peer Herholz, José C. García Alanis, Christoph Vogelbacher
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

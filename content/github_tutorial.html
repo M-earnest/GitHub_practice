@@ -1,0 +1,820 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Git, GitHub and your machine &#8212; Course Template for ressources in higher education</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/github_tutorial';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Collaboration using GitHub" href="github_tutorial_collab.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Course Template for ressources in higher education - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Course Template for ressources in higher education - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Git, GitHub and your machine
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="github_tutorial_collab.html">Collaboration using GitHub</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/M-earnest/course_template_diler" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/M-earnest/course_template_diler/edit/master/lecture/content/github_tutorial.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/M-earnest/course_template_diler/issues/new?title=Issue%20on%20page%20%2Fcontent/github_tutorial.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/github_tutorial.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Git, GitHub and your machine</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-git-and-github">Why Git and GitHub?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-workflow-version-control-using-gitkraken">Practice: Workflow — Version control using GitKraken</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-initialize-a-local-repository">Step 1: Initialize a Local Repository</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-add-a-file-to-your-project">Step 2: Add a File to Your Project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-stage-the-file">Step 3: Stage the File</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-commit-the-change">Step 4: Commit the Change</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-to-remote">Local to Remote:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-create-a-remote-repository-on-github">Step 5: Create a Remote Repository on GitHub</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-connect-gitkraken-to-the-remote-repository">Step 6: Connect GitKraken to the Remote Repository</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-push-to-github">Step 7: Push to GitHub</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control-and-conflicts">Version Control and conflicts</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-edit-files-on-github">Step 8: Edit Files on GitHub</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-pull-changes-from-github-remote-to-local">Step 9: Pull Changes from GitHub remote to local</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-creating-conflicts">Step 10: Creating Conflicts</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-resolve-a-merge-conflict-in-gitkraken">Step 11: Resolve a Merge Conflict in GitKraken</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-for-terminal-wizards">Git for terminal wizards</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-project-folder">1. Create your project folder</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-a-git-repo">2. Initialize a git repo</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-your-files-to-staging-or-use-to-add-everything">3. Add your files to staging (or use ‘.’ to add everything)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-the-files">4. Commit the files</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-remote-repository-replace-with-your-github-repo-url">5. Add the remote repository (replace with your GitHub repo URL)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#push-to-the-remote-assumes-your-local-branch-is-named-main">6. Push to the remote (assumes your local branch is named ‘main’)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="git-github-and-your-machine">
+<h1>Git, GitHub and your machine<a class="headerlink" href="#git-github-and-your-machine" title="Permalink to this heading">#</a></h1>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
+<p>Neuroscience/Experimental psychology necessarily generates code and data that ideally is traceable from acquisition to publication (I’m certain you all can name a few reasons for this).</p>
+<p>A distributed version-control system (Git) hosted on a collaboration platform (GitHub) provides a rigorous provenance backbone. It allows us to maintain a history of our projects, collaborate with others, make our work transparent and share it with the world.</p>
+<section id="why-git-and-github">
+<h3>Why Git and GitHub?<a class="headerlink" href="#why-git-and-github" title="Permalink to this heading">#</a></h3>
+<p>Git as a version control system :</p>
+<ul class="simple">
+<li><p>tracks exactly what was changed, when, and by whom.</p></li>
+<li><p>creates a complete lineage of changes across branches, forks and collaborators, i.e the “commit history”</p></li>
+<li><p>gives the ability to revert/review the state of a project to any past point in time</p></li>
+<li><p>command line based or integration with tools like GitKraken for visual workflows.</p></li>
+</ul>
+<p>GitHub builds on Git to support:</p>
+<ul class="simple">
+<li><p>Secure cloud-based backup and access</p></li>
+<li><p>Collaboration through branching, pull requests, code reviews.</p></li>
+<li><p>Issue tracking and project management.</p></li>
+</ul>
+<p>Relevance for the lab:</p>
+<ul class="simple">
+<li><p><strong>Collaboration</strong></p>
+<ul>
+<li><p>Transparent collaborative development</p></li>
+</ul>
+</li>
+<li><p><strong>Standardization</strong></p>
+<ul>
+<li><p>Reproducible analysis pipelines: preprocessing, analysis, generating plots</p></li>
+<li><p>Archiving of computational steps: compliance with data sharing policies, open science initiatives, etc.</p></li>
+</ul>
+</li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Key Git and GitHub Terms</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Commit</strong><br />
+A snapshot of your changes. Each commit records what was changed and includes a message describing why.</p>
+<p class="sd-card-text"><strong>Push</strong><br />
+Sends your commits from your local machine to a remote repository on GitHub.</p>
+<p class="sd-card-text"><strong>Pull</strong><br />
+Fetches the latest changes from a remote repository and merges them into your local copy.</p>
+<p class="sd-card-text"><strong>Fork</strong><br />
+Creates a personal copy of someone else’s repository on your GitHub account. Used when you don’t have write access to the original.</p>
+<p class="sd-card-text"><strong>Branch</strong><br />
+A parallel version of the project where you can develop features or fixes without affecting the main code. Useful for working on isolated changes.</p>
+<p class="sd-card-text"><strong>Checkout</strong><br />
+Switches your working directory to a different branch or commit. Use this to move between different lines of development.</p>
+<p class="sd-card-text"><strong>Fetch</strong><br />
+Downloads the latest changes from a remote repository, but does <strong>not</strong> merge them into your local branches. Useful for reviewing remote activity before applying it.</p>
+</div>
+</details></section>
+<section id="practice-workflow-version-control-using-gitkraken">
+<h3>Practice: Workflow — Version control using GitKraken<a class="headerlink" href="#practice-workflow-version-control-using-gitkraken" title="Permalink to this heading">#</a></h3>
+<p>Let’s jump into practice. We’ll learn the relevant functions and terms along the way.</p>
+<p><strong>Goal</strong>
+In this section, you’ll learn how to create a Git repository using GitKraken, make your first commit, and push it to GitHub.</p>
+<section id="step-1-initialize-a-local-repository">
+<h4>Step 1: Initialize a Local Repository<a class="headerlink" href="#step-1-initialize-a-local-repository" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Open GitKraken.</p></li>
+<li><p>In the left sidebar, click + → Init Repo</p></li>
+<li><p>Create or select a folder on your machine for tracking, e.g. your Desktop</p></li>
+<li><p>Name the repo ‘my-icecream_project’ and confirm</p></li>
+</ul>
+<p>This creates a local Git repository. GitKraken automatically tracks changes in that initialized folder. You’ll now see the main branch and an empty commit history.</p>
+</section>
+<section id="step-2-add-a-file-to-your-project">
+<h4>Step 2: Add a File to Your Project<a class="headerlink" href="#step-2-add-a-file-to-your-project" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Open the folder in file explorer/terminal.</p></li>
+<li><p>Create new file, e.g., ice_cream.md (Using a text editor or the command line, e.g. Nano/touch)</p></li>
+<li><p>add the names of your 3 favorite Ice cream flavors in descending order and save the changes</p></li>
+<li><p>Go back to the GitKraken Window. The file should appear under Unstaged Files</p></li>
+</ul>
+</section>
+<section id="step-3-stage-the-file">
+<h4>Step 3: Stage the File<a class="headerlink" href="#step-3-stage-the-file" title="Permalink to this heading">#</a></h4>
+<p>Staging gives you control over what file/change to include in each commit-snapshot.</p>
+<p>In GitKraken:</p>
+<ul class="simple">
+<li><p>Click the checkbox next to <a class="reference external" href="http://README.md">README.md</a> to stage it</p></li>
+</ul>
+</section>
+<section id="step-4-commit-the-change">
+<h4>Step 4: Commit the Change<a class="headerlink" href="#step-4-commit-the-change" title="Permalink to this heading">#</a></h4>
+<p>A commit is a saved version of the project and it’s contents. You’ll now see it in the commit graph (visual log of a repository’s history)</p>
+<ul class="simple">
+<li><p>In the Commit Message box, choose an informative title and description:
+e.g.: Title: add ice_cream.md
+Description: Added a ranking of my favorite icecream flavors</p></li>
+<li><p>Click Commit Changes</p></li>
+<li><p>Rinse and repeat for every new, meaningful change</p></li>
+</ul>
+</section>
+</section>
+<section id="local-to-remote">
+<h3>Local to Remote:<a class="headerlink" href="#local-to-remote" title="Permalink to this heading">#</a></h3>
+<p>Now this is where we would stop if we would just like work on our own system. For collaboration and transperency we’ll need to push our local repository to GitHub. We’ll show you how to do this the proper way, but Gitkraken will allow you to shortcut Steps 5 to 7, as it allows us to simply create a remote from a local repository via it’s push function. GitKraken will then detect that there’s no remote set up yet and will ask if you want to create a new remote repository.</p>
+<section id="step-5-create-a-remote-repository-on-github">
+<h4>Step 5: Create a Remote Repository on GitHub<a class="headerlink" href="#step-5-create-a-remote-repository-on-github" title="Permalink to this heading">#</a></h4>
+<p>We’ll first create a “remote” version of the repository to push our changes to.</p>
+<ul class="simple">
+<li><p>Go to <a class="github reference external" href="https://github.com">github</a></p></li>
+<li><p>Click “New Repository”</p></li>
+<li><p>Give it the same name as your local repository</p></li>
+<li><p>Leave it empty (no README or license)</p></li>
+<li><p>Click Create Repository</p></li>
+<li><p>Copy the URL (e.g., <a class="github reference external" href="https://github.com/yourusername/repo_name.git">yourusername/repo_name.git</a>)</p></li>
+</ul>
+</section>
+<section id="step-6-connect-gitkraken-to-the-remote-repository">
+<h4>Step 6: Connect GitKraken to the Remote Repository<a class="headerlink" href="#step-6-connect-gitkraken-to-the-remote-repository" title="Permalink to this heading">#</a></h4>
+<p>Back in GitKraken:</p>
+<ul class="simple">
+<li><p>In the left panel, click Remote → Add Remote</p></li>
+<li><p>Name it origin (conventional default)</p></li>
+<li><p>Paste the GitHub URL, confirm</p></li>
+</ul>
+</section>
+<section id="step-7-push-to-github">
+<h4>Step 7: Push to GitHub<a class="headerlink" href="#step-7-push-to-github" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Click the Push button (top toolbar).</p></li>
+<li><p>If prompted, log into GitHub via GitKraken’s authentication flow.</p></li>
+<li><p>Push your main branch to the origin remote.</p></li>
+</ul>
+<p>The push sends your local commits to GitHub. You now have a fully synchronized local–remote setup.</p>
+</section>
+</section>
+<section id="version-control-and-conflicts">
+<h3>Version Control and conflicts<a class="headerlink" href="#version-control-and-conflicts" title="Permalink to this heading">#</a></h3>
+<p>Now that we have to separate instances of our project, we can simply work locally and push to GitHub whenever sensible. For collaboration and project work we might have multiple people contributing to the same remote repository. In the next steo we’ll illustrate the possible problems arising here and how to manage them.</p>
+<p>Some files, e.g. Markdown files can be directly edited using the GitHub web interface, so we’ll do a quick simulation.</p>
+<section id="step-8-edit-files-on-github">
+<h4>Step 8: Edit Files on GitHub<a class="headerlink" href="#step-8-edit-files-on-github" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Navigate to your repository on <a class="reference external" href="http://GitHub.com">GitHub.com</a></p></li>
+<li><p>Click on the ice_crean.md to open it.</p></li>
+<li><p>Click the ✏️ Edit button (top right)</p></li>
+<li><p>Make your changes, scroll down, and enter a commit message. Commit changes.</p></li>
+</ul>
+<p>This edits the file directly on GitHub and creates a new commit in your remote repository. Let’s pull these changes to your local repo.</p>
+</section>
+<section id="step-9-pull-changes-from-github-remote-to-local">
+<h4>Step 9: Pull Changes from GitHub remote to local<a class="headerlink" href="#step-9-pull-changes-from-github-remote-to-local" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>In GitKraken, simply click the Pull button (top toolbar)</p></li>
+<li><p>profit??</p></li>
+</ul>
+</section>
+<section id="step-10-creating-conflicts">
+<h4>Step 10: Creating Conflicts<a class="headerlink" href="#step-10-creating-conflicts" title="Permalink to this heading">#</a></h4>
+<p>Now let’s see what happens if the changes to a certain file do not match between the local and remote repositories.</p>
+<p><strong>Online Edit</strong></p>
+<ul class="simple">
+<li><p>Go to your repository on <a class="reference external" href="http://GitHub.com">GitHub.com</a> and open ice_cream.md</p></li>
+<li><p>Click the ✏️ Edit button, make a small change (e.g., add a new ice cream flavor), and commit directly to the main branch</p></li>
+</ul>
+<p><strong>Local Edit</strong></p>
+<ul class="simple">
+<li><p>Without pulling the remote change, open ice_cream.md locally and make a different change to the same section of the file</p></li>
+<li><p>Save and commit your change using GitKraken</p></li>
+</ul>
+<p><strong>Pull the Conflict</strong></p>
+<ul class="simple">
+<li><p>In GitKraken, click the Pull button.</p></li>
+<li><p>GitKraken will detect the conflicting changes and show a merge conflict notification</p></li>
+</ul>
+</section>
+<section id="step-11-resolve-a-merge-conflict-in-gitkraken">
+<h4>Step 11: Resolve a Merge Conflict in GitKraken<a class="headerlink" href="#step-11-resolve-a-merge-conflict-in-gitkraken" title="Permalink to this heading">#</a></h4>
+<p>Resolving conflicts ensures both sets of changes are merged without losing data. GitKraken’s visual tools make this process easier to understand and control.</p>
+<ul class="simple">
+<li><p>In the left panel, click the conflicted file ice_cream.md.</p></li>
+<li><p>GitKraken will open a 3-way merge editor:</p>
+<ul>
+<li><p>The left side shows your local changes.</p></li>
+<li><p>The right side shows the incoming changes from GitHub.</p></li>
+<li><p>The middle area is where you choose how to resolve the conflict.</p></li>
+</ul>
+</li>
+<li><p>Use the interface to:</p>
+<ul>
+<li><p>Accept one side,</p></li>
+<li><p>Combine both,</p></li>
+<li><p>Or manually edit the result.</p></li>
+</ul>
+</li>
+<li><p>Once resolved, click Mark as Resolved.</p></li>
+<li><p>Finally, commit the merge using the Commit panel, and click Push to update GitHub</p></li>
+</ul>
+</section>
+</section>
+<section id="git-for-terminal-wizards">
+<h3>Git for terminal wizards<a class="headerlink" href="#git-for-terminal-wizards" title="Permalink to this heading">#</a></h3>
+<p>Git is foremost a command line tool, therefore it is quite easy to setup and manage projects directly.
+If you are already are confident in working with the command-line interface, using pure git might be faster and more reproducible. Here are the steps above as you’d implement them.</p>
+<section id="create-your-project-folder">
+<h4>1. Create your project folder<a class="headerlink" href="#create-your-project-folder" title="Permalink to this heading">#</a></h4>
+<p>mkdir my-icecream_project
+cd my-icecream_project</p>
+</section>
+<section id="initialize-a-git-repo">
+<h4>2. Initialize a git repo<a class="headerlink" href="#initialize-a-git-repo" title="Permalink to this heading">#</a></h4>
+<p>git init</p>
+</section>
+<section id="add-your-files-to-staging-or-use-to-add-everything">
+<h4>3. Add your files to staging (or use ‘.’ to add everything)<a class="headerlink" href="#add-your-files-to-staging-or-use-to-add-everything" title="Permalink to this heading">#</a></h4>
+<p>git add .
+touch ice_cream.md</p>
+</section>
+<section id="commit-the-files">
+<h4>4. Commit the files<a class="headerlink" href="#commit-the-files" title="Permalink to this heading">#</a></h4>
+<p>git commit -m “Initial commit”</p>
+</section>
+<section id="add-the-remote-repository-replace-with-your-github-repo-url">
+<h4>5. Add the remote repository (replace with your GitHub repo URL)<a class="headerlink" href="#add-the-remote-repository-replace-with-your-github-repo-url" title="Permalink to this heading">#</a></h4>
+<p>git remote add origin <a class="github reference external" href="https://github.com/your-username/my-icecream_project.git">your-username/my-icecream_project.git</a></p>
+</section>
+<section id="push-to-the-remote-assumes-your-local-branch-is-named-main">
+<h4>6. Push to the remote (assumes your local branch is named ‘main’)<a class="headerlink" href="#push-to-the-remote-assumes-your-local-branch-is-named-main" title="Permalink to this heading">#</a></h4>
+<p>git push -u origin main</p>
+</section>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="github_tutorial_collab.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Collaboration using GitHub</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-git-and-github">Why Git and GitHub?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-workflow-version-control-using-gitkraken">Practice: Workflow — Version control using GitKraken</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-initialize-a-local-repository">Step 1: Initialize a Local Repository</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-add-a-file-to-your-project">Step 2: Add a File to Your Project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-stage-the-file">Step 3: Stage the File</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-commit-the-change">Step 4: Commit the Change</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-to-remote">Local to Remote:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-create-a-remote-repository-on-github">Step 5: Create a Remote Repository on GitHub</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-connect-gitkraken-to-the-remote-repository">Step 6: Connect GitKraken to the Remote Repository</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-push-to-github">Step 7: Push to GitHub</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control-and-conflicts">Version Control and conflicts</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-edit-files-on-github">Step 8: Edit Files on GitHub</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-pull-changes-from-github-remote-to-local">Step 9: Pull Changes from GitHub remote to local</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-creating-conflicts">Step 10: Creating Conflicts</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-resolve-a-merge-conflict-in-gitkraken">Step 11: Resolve a Merge Conflict in GitKraken</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-for-terminal-wizards">Git for terminal wizards</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-project-folder">1. Create your project folder</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-a-git-repo">2. Initialize a git repo</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-your-files-to-staging-or-use-to-add-everything">3. Add your files to staging (or use ‘.’ to add everything)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-the-files">4. Commit the files</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-remote-repository-replace-with-your-github-repo-url">5. Add the remote repository (replace with your GitHub repo URL)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#push-to-the-remote-assumes-your-local-branch-is-named-main">6. Push to the remote (assumes your local branch is named ‘main’)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Ernst, Felix Körber based on the Gorella template by Peer Herholz, José C. García Alanis, Christoph Vogelbacher
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
