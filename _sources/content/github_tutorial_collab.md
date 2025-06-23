@@ -73,9 +73,9 @@ You clone your fork, work on it, push changes, and create a pull request back to
 
 ### Step 3: Contributor makes and commits changes
 
-Next, we want to to contribut to this cool project we've found. As we are naturally unbiased in our assesments, we will improve the ranking by the original author. 
+Now we want to to contribute to this cool project we've found. As we are naturally unbiased in our assesments, we will improve the rankings of the original author. 
 
-There are two ways to do this, either the proper way as described below or, as we are working with Markdown files, edit the file directly in the browser. Either way, we will first be creating a fork of the repo in question.
+There are two ways to do this, either the proper way as described below or, as we are working with Markdown files, by editing the file directly in the browser. Either way, we will first be creating a fork of the repo in question.
 
 A fork is your own indepenent copy of another repository on GitHub, letting you experiment and make changes without affecting the original project.
 
@@ -90,8 +90,8 @@ A fork is your own indepenent copy of another repository on GitHub, letting you 
 A pull request lets you propose changes from your fork back to the original repository so they can be reviewed, discussed, and merged.
 
 - Go to your forked repository on GitHub
-- GitHub should show a banner that says "Compare & pull request". Click it
-- Confirm that the pull request will go from your fork to the host’s main repository
+- GitHub should show how many commits your repo is behind/ahead. Next to this you'll find the `contribute` button. Click it
+- Click `Open pull request`
 - Fill in the pull request form: Add a meaningful title + desription
 
 <figure>
@@ -130,11 +130,11 @@ While the pull request is still open:
 - Save the file, commit the change, and push it to GitHub.
 
 ### Step 6: Review the pull request (before merging)
-- Go back to the pull request page on the host’s repository
+- Go to the pull request page on the host’s repository
 - Notice that GitHub now shows "This branch has conflicts that must be resolved"
 - This means the same file was changed in both the fork and the main repo
 
-At this point, do not merge the pull request yet. Instead, we'll use this as an opportunity to review the conflict and prepare to resolve it.
+We'll use this as an opportunity to review the conflict and prepare to resolve it.
 
 
 <figure>
@@ -164,7 +164,7 @@ contributor's version
 </figure>
 
 
-We'll edit the file to combine both changes into a clean, final version, remove the conflict markers and make sure the file looks correct.
+We'll edit the file to combine both changes into a clean, final version, remove the conflict markers (<<<<<<<, =======, >>>>>>>) and make sure the file looks correct.
 
 Once you're done:
 - Click "Mark as resolved"
