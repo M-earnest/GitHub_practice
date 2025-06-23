@@ -398,7 +398,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Collaboration using GitHub</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-collaboration">Practice - Collaboration</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-host-shares-repo">Step 1: Host shares repo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-contributor-forks-and-clones">Step 2: Contributor Forks and Clones</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-contributor-makes-and-commits-changes">Step 3: Contributor makes and commits changes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-contributor-opens-a-pull-request">Step 4: Contributor opens a pull request</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-host-makes-changes-to-the-original-repo">Step 5: Host makes changes to the original repo</a></li>
@@ -406,10 +408,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-resolving-conflicts">Step 7: Resolving conflicts</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-host-s-version">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-host’s version</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content-managing-projects-via-github">Additional content - Managing projects via GitHub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-project-managment">Practice - Project managment</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content-managing-projects-via-github">Additional content - Managing projects via GitHub</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-project-managment">Practice - Project managment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-collaborators-to-a-project">Adding Collaborators to a Project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-items-to-a-project">Adding Items to a Project:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-tasks-and-roles">Assigning Tasks and Roles</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -444,21 +449,24 @@ You click <strong>Fork</strong> on GitHub, which creates a copy of the repo unde
 You clone your fork, work on it, push changes, and create a pull request back to the original repo.</p>
 </div>
 </details></section>
-<section id="practice">
-<h1>Practice<a class="headerlink" href="#practice" title="Permalink to this heading">#</a></h1>
+<section id="practice-collaboration">
+<h1>Practice - Collaboration<a class="headerlink" href="#practice-collaboration" title="Permalink to this heading">#</a></h1>
 <p>Pair up with the person next to you. Decide who will be the host and who will be the contributor. We’ll find out who has the best taste in ice cream?</p>
 <p>Each participant should already have a file ice_cream.md in their repo, containing something like:
 1.Pistachio
 2.Vanilla
 3.Chocolate</p>
-<p>Step 1: Host shares repo</p>
+<section id="step-1-host-shares-repo">
+<h2>Step 1: Host shares repo<a class="headerlink" href="#step-1-host-shares-repo" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>On GitHub:</p></li>
 <li><p>Go to <a class="github reference external" href="https://github.com/your-username">your-username</a></p></li>
 <li><p>Open your repo (e.g., ice-cream-prefs)</p></li>
 <li><p>Copy the URL and send it to your partner (Contributor)</p></li>
 </ul>
-<p>Step 2: Contributor Forks and Clones</p>
+</section>
+<section id="step-2-contributor-forks-and-clones">
+<h2>Step 2: Contributor Forks and Clones<a class="headerlink" href="#step-2-contributor-forks-and-clones" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Open the Host’s GitHub repo in your browser.</p></li>
 <li><p>In the top-right, click the “Fork” button.</p>
@@ -478,6 +486,7 @@ You clone your fork, work on it, push changes, and create a pull request back to
 <li><p>Click Clone the repo</p></li>
 </ul>
 <p>You now have a local copy of the forked repo, ready to work on.</p>
+</section>
 <section id="step-3-contributor-makes-and-commits-changes">
 <h2>Step 3: Contributor makes and commits changes<a class="headerlink" href="#step-3-contributor-makes-and-commits-changes" title="Permalink to this heading">#</a></h2>
 <p>Next, we want to to contribut to this cool project we’ve found. As we are naturally unbiased in our assesments, we will improve the ranking by the original author.</p>
@@ -540,27 +549,13 @@ Short description of the change.</p>
 <li><p>Click “Resolve conflicts”.</p></li>
 </ul>
 <p>GitHub will show the file with conflict markers like:</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="head-host-s-version">
-<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-host’s version<a class="headerlink" href="#head-host-s-version" title="Permalink to this heading">#</a></h1>
-<p>contributor’s version</p>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>fork-branch</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span class="n">HEAD</span>
+<span class="n">host</span><span class="s1">&#39;s version</span>
+<span class="o">=======</span>
+<span class="n">contributor</span><span class="s1">&#39;s version</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="n">fork</span><span class="o">-</span><span class="n">branch</span>
+</pre></div>
+</div>
 <p>We’ll edit the file to combine both changes into a clean, final version, remove the conflict markers and make sure the file looks correct.</p>
 <p>Once you’re done:</p>
 <ul class="simple">
@@ -568,20 +563,17 @@ host’s version<a class="headerlink" href="#head-host-s-version" title="Permali
 <li><p>Click “Commit merge”</p></li>
 <li><p>Finally, click “Merge pull request” and confirm the merge</p></li>
 </ul>
+</section>
+</section>
 <section id="additional-content-managing-projects-via-github">
-<h2>Additional content - Managing projects via GitHub<a class="headerlink" href="#additional-content-managing-projects-via-github" title="Permalink to this heading">#</a></h2>
+<h1>Additional content - Managing projects via GitHub<a class="headerlink" href="#additional-content-managing-projects-via-github" title="Permalink to this heading">#</a></h1>
 <p>GitHub Projects is a built-in tool for planning and tracking work. It helps you organize tasks, features, and bugs directly alongside your code. You can think of it as GitHub’s alternative to tools like Trello or Jira.</p>
-<ul class="simple">
-<li><p>What You Can Do with Projects</p>
-<ul>
-<li><p>Break your work into tasks or issues</p></li>
-<li><p>Visualize progress using boards, tables, or timelines</p></li>
-<li><p>Assign tasks to collaborators</p></li>
-<li><p>Track pull requests and issues in one place</p></li>
-<li><p>Set priorities and due dates</p></li>
-</ul>
-</li>
-</ul>
+<p>GitHub Projects allow you to:
+- Break your work into tasks or issues
+- Visualize progress using boards, tables, or timelines
+- Assign tasks to collaborators
+- Track pull requests and issues in one place
+- Set priorities and due dates</p>
 <p>Projects are usually organized as boards with columns. The default setup looks like the following, but can be freely changed:</p>
 <ul class="simple">
 <li><p>To Do – upcoming tasks</p></li>
@@ -595,12 +587,11 @@ host’s version<a class="headerlink" href="#head-host-s-version" title="Permali
 <li><p>pull request</p></li>
 <li><p>notes, i.e. ideas or reminders</p></li>
 </ul>
-</section>
 <section id="practice-project-managment">
 <h2>Practice - Project managment<a class="headerlink" href="#practice-project-managment" title="Permalink to this heading">#</a></h2>
 <p>Creating a new project:</p>
 <ul class="simple">
-<li><p>Go to your repository on GitHub or click on the three bars indicating a dropdown menu at the top-left.</p>
+<li><p>Go to your repository on GitHub or click on the three bars indicating a dropdown menu at the top-left</p>
 <ul>
 <li><p>Click Projects</p></li>
 <li><p>Click New Project</p></li>
@@ -609,12 +600,68 @@ host’s version<a class="headerlink" href="#head-host-s-version" title="Permali
 </ul>
 </li>
 </ul>
-<p>Adding Items to a Project:</p>
+<section id="adding-collaborators-to-a-project">
+<h3>Adding Collaborators to a Project<a class="headerlink" href="#adding-collaborators-to-a-project" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Open the project page</p></li>
+<li><p>Click <strong>Settings</strong> → <strong>Collaborators</strong></p></li>
+<li><p>Add members of your organization by typing their GitHub username</p></li>
+<li><p>Assign permissions:</p>
 <ul class="simple">
-<li><p>From the project board: click + Add item</p></li>
-<li><p>From an issue or pull request: use the Projects dropdown on the sidebar</p></li>
-<li><p>From inside the project: link existing issues or PRs</p></li>
+<li><p><strong>Read</strong> – View project but no edits</p></li>
+<li><p><strong>Write</strong> – Add/edit items, change statuses, assign fields</p></li>
+<li><p><strong>Admin</strong> – Full control including managing views, workflows, and settings</p></li>
 </ul>
+</li>
+</ol>
+</section>
+<section id="adding-items-to-a-project">
+<h3>Adding Items to a Project:<a class="headerlink" href="#adding-items-to-a-project" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>From the project interface</strong>:</p>
+<ul>
+<li><p>Click <strong>+ Add item</strong> to create a new draft issue or task</p></li>
+<li><p>Or click <strong>+ Add cards</strong> to search for and link existing issues or pull requests from any repository in the organization</p></li>
+</ul>
+</li>
+<li><p><strong>From an issue or pull request</strong>:</p>
+<ul>
+<li><p>Open the issue or PR from any repo in the organization</p></li>
+<li><p>In the right-hand sidebar, under <strong>Projects</strong>, click the dropdown and select your organization-level project</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="assigning-tasks-and-roles">
+<h3>Assigning Tasks and Roles<a class="headerlink" href="#assigning-tasks-and-roles" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Assign project items</strong>:</p>
+<ul>
+<li><p>Within the project view, click any item (issue, draft, or PR)</p></li>
+<li><p>Use the <strong>Assignee</strong> field to assign a person.</p></li>
+<li><p>Optionally, define a custom field like “Role” or “Lab Responsibility” to clarify who is doing what</p></li>
+</ul>
+</li>
+<li><p><strong>Organize with views</strong>:</p>
+<ul>
+<li><p>Use filters to create views like:</p>
+<ul>
+<li><p>“Assigned to me”</p></li>
+<li><p>“Blocked tasks”</p></li>
+<li><p>“Manuscript-related items”</p></li>
+</ul>
+</li>
+<li><p>Group by status, assignee, or priority</p></li>
+</ul>
+</li>
+<li><p><strong>Track progress</strong>:</p>
+<ul>
+<li><p>Move cards through columns (e.g., To Do → In Progress → Review → Done)</p></li>
+<li><p>Add status automation via workflows if enabled</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -674,7 +721,9 @@ host’s version<a class="headerlink" href="#head-host-s-version" title="Permali
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Collaboration using GitHub</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-collaboration">Practice - Collaboration</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-host-shares-repo">Step 1: Host shares repo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-contributor-forks-and-clones">Step 2: Contributor Forks and Clones</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-contributor-makes-and-commits-changes">Step 3: Contributor makes and commits changes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-contributor-opens-a-pull-request">Step 4: Contributor opens a pull request</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-host-makes-changes-to-the-original-repo">Step 5: Host makes changes to the original repo</a></li>
@@ -682,10 +731,13 @@ host’s version<a class="headerlink" href="#head-host-s-version" title="Permali
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-resolving-conflicts">Step 7: Resolving conflicts</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-host-s-version">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-host’s version</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content-managing-projects-via-github">Additional content - Managing projects via GitHub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-project-managment">Practice - Project managment</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-content-managing-projects-via-github">Additional content - Managing projects via GitHub</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-project-managment">Practice - Project managment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-collaborators-to-a-project">Adding Collaborators to a Project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-items-to-a-project">Adding Items to a Project:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-tasks-and-roles">Assigning Tasks and Roles</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
