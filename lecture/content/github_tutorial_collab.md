@@ -26,7 +26,7 @@ You clone your fork, work on it, push changes, and create a pull request back to
 ```
 
 
-## Practice
+## Practice - Collaboration
 
 Pair up with the person next to you. Decide who will be the host and who will be the contributor. We’ll find out who has the best taste in ice cream?
 
@@ -36,13 +36,13 @@ Each participant should already have a file ice_cream.md in their repo, containi
 3.Chocolate
 
 
-Step 1: Host shares repo
+### Step 1: Host shares repo
 - On GitHub:
 - Go to https://github.com/your-username
 - Open your repo (e.g., ice-cream-prefs)
 - Copy the URL and send it to your partner (Contributor)
 
-Step 2: Contributor Forks and Clones
+### Step 2: Contributor Forks and Clones
 - Open the Host’s GitHub repo in your browser.
 - In the top-right, click the “Fork” button.
     - GitHub will create a copy of the repo under your own username.
@@ -121,11 +121,13 @@ At this point, do not merge the pull request yet. Instead, we'll use this as an 
 
 GitHub will show the file with conflict markers like:
 
+```
 <<<<<<< HEAD
 host's version
 =======
 contributor's version
 >>>>>>> fork-branch
+```
 
 We'll edit the file to combine both changes into a clean, final version, remove the conflict markers and make sure the file looks correct.
 
@@ -135,11 +137,11 @@ Once you're done:
 - Finally, click "Merge pull request" and confirm the merge
 
 
-### Additional content - Managing projects via GitHub
+## Additional content - Managing projects via GitHub
 
 GitHub Projects is a built-in tool for planning and tracking work. It helps you organize tasks, features, and bugs directly alongside your code. You can think of it as GitHub’s alternative to tools like Trello or Jira.
 
-- What You Can Do with Projects
+GitHub Projects allow you to:
     - Break your work into tasks or issues
     - Visualize progress using boards, tables, or timelines
     - Assign tasks to collaborators
@@ -161,13 +163,46 @@ Each item on the board can be:
 
 Creating a new project:
 
-- Go to your repository on GitHub or click on the three bars indicating a dropdown menu at the top-left.
+- Go to your repository on GitHub or click on the three bars indicating a dropdown menu at the top-left
     - Click Projects
     - Click New Project
     - Choose a layout: Board, Table, or Roadmap
     - Name your project and set up columns or views as needed
+ 
+#### Adding Collaborators to a Project
 
-Adding Items to a Project:
-- From the project board: click + Add item
-- From an issue or pull request: use the Projects dropdown on the sidebar
-- From inside the project: link existing issues or PRs
+1. Open the project page
+2. Click **Settings** → **Collaborators**
+3. Add members of your organization by typing their GitHub username
+4. Assign permissions:
+   - **Read** – View project but no edits
+   - **Write** – Add/edit items, change statuses, assign fields
+   - **Admin** – Full control including managing views, workflows, and settings
+
+
+#### Adding Items to a Project:
+- **From the project interface**:
+  - Click **+ Add item** to create a new draft issue or task
+  - Or click **+ Add cards** to search for and link existing issues or pull requests from any repository in the organization
+
+- **From an issue or pull request**:
+  - Open the issue or PR from any repo in the organization
+  - In the right-hand sidebar, under **Projects**, click the dropdown and select your organization-level project
+ 
+#### Assigning Tasks and Roles
+
+- **Assign project items**:
+  - Within the project view, click any item (issue, draft, or PR)
+  - Use the **Assignee** field to assign a person.
+  - Optionally, define a custom field like “Role” or “Lab Responsibility” to clarify who is doing what
+
+- **Organize with views**:
+  - Use filters to create views like:
+    - “Assigned to me”
+    - “Blocked tasks”
+    - “Manuscript-related items”
+  - Group by status, assignee, or priority
+
+- **Track progress**:
+  - Move cards through columns (e.g., To Do → In Progress → Review → Done)
+  - Add status automation via workflows if enabled
