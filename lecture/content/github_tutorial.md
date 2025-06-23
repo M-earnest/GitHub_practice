@@ -69,6 +69,10 @@ In this section, you’ll learn how to create a Git repository using GitKraken, 
   
 This creates a local Git repository. GitKraken automatically tracks changes in that initialized folder. You’ll now see the main branch and an empty commit history.
 
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/init_repo.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Initializing a new GitHub repository </figcaption>
+</figure>
 screenshot - init_repo
 
 #### Step 2: Add a File to Your Project
