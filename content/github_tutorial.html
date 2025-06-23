@@ -535,8 +535,27 @@ In this section, you’ll learn how to create a Git repository using GitKraken, 
 </details></section>
 <section id="step-4-commit-the-change">
 <h4>Step 4: Commit the Change<a class="headerlink" href="#step-4-commit-the-change" title="Permalink to this heading">#</a></h4>
-<p>A commit is a saved version of the project and it’s contents. You’ll now see it in the commit graph (visual log of a repository’s history)</p>
+<p>A commit is a saved version of the project and it’s contents. You’ll now see it in the commit graph (visual log of a repository’s history) with a unique ID called a  Secure Hash Algorithm* (<strong>SHA</strong>).</p>
+<p>It records:</p>
 <ul class="simple">
+<li><p>What files were changed</p></li>
+<li><p>How they were changed</p></li>
+<li><p>When the change happened</p></li>
+<li><p>Who made the change</p></li>
+<li><p>A message explaining why the change was made</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Tip: Commits</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Make a new commit every time you finish a meaningful piece of work. This keeps your history clear and lets you roll back or compare changes later if needed.</p>
+<p class="sd-card-text">Good habits:</p>
+<ul class="simple">
+<li><p class="sd-card-text">One commit = one purpose</p></li>
+<li><p class="sd-card-text">Commit early and often, not all at once at the end</p></li>
+<li><p class="sd-card-text">Use clear titles so others (and future you) understand what was changed</p></li>
+</ul>
+</div>
+</details><ul class="simple">
 <li><p>In the Commit Message box, choose an informative title and description:
 e.g.: Title: add ice_cream.md
 Description: Added a ranking of my favorite icecream flavors</p></li>
@@ -547,7 +566,25 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/updated_history.png?raw=true" alt="Init a repo" >
   <figcaption>Figure: Commit history</figcaption>
 </figure>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Tip: Reverting a Commit</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Reverting a commit means undoing its changes by creating a new commit that cancels them out. The original commit stays in the history.</p>
+<p class="sd-card-text">When to revert:</p>
+<ul class="simple">
+<li><p class="sd-card-text">You made a mistake in a commit</p></li>
+<li><p class="sd-card-text">You want to remove a change without deleting history</p></li>
+</ul>
+<p class="sd-card-text">How to do it in GitKraken:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Right-click the commit in the graph (or use the Undo option for the most recent commit)</p></li>
+<li><p class="sd-card-text">Click Revert commit</p></li>
+<li><p class="sd-card-text">A new commit appears reversing the change</p></li>
+<li><p class="sd-card-text">Push to update the remote</p></li>
+</ol>
+<p class="sd-card-text">Revert is safe on shared branches. It keeps history intact and visible to collaborators.</p>
+</div>
+</details></section>
 </section>
 <section id="local-to-remote">
 <h3>Local to Remote:<a class="headerlink" href="#local-to-remote" title="Permalink to this heading">#</a></h3>
