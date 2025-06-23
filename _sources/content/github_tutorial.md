@@ -81,17 +81,27 @@ This creates a local Git repository. GitKraken automatically tracks changes in t
 - add the names of your 3 favorite Ice cream flavors in descending order and save the changes
 - Go back to the GitKraken Window. The file should appear under Unstaged Files
 
+
 #### Step 3: Stage the File
 Staging gives you control over what file/change to include in each commit-snapshot.
 
 In GitKraken:
-- Click the checkbox next to README.md to stage it
+- Click the checkbox next to ice_cream.md to stage it
 
 
 <figure>
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/staging.png?raw=true" alt="Init a repo" width="200" height="600">
   <figcaption>Figure: Staging changes </figcaption>
 </figure>
+
+```{dropdown} Tip: Creating and Managing a **.gitignore** File
+:icon: info
+
+To prevent unnecessary, large or system-generated files (like `.DS_Store` on macOS or temporary Jupyter notebook checkpoints) from being tracked by Git, use a `.gitignore` file.
+
+1. In your project folder, create a file named `.gitignore`
+2. Add file or folder names you want Git to ignore
+```
 
 #### Step 4: Commit the Change
 A commit is a saved version of the project and it's contents. You’ll now see it in the commit graph (visual log of a repository’s history)
@@ -105,8 +115,8 @@ A commit is a saved version of the project and it's contents. You’ll now see i
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/commiting.png?raw=true" alt="Init a repo" width="200" height="600">
-  <figcaption>Figure: Committing changes </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/updated_history.png?raw=true" alt="Init a repo" >
+  <figcaption>Figure: Commit history</figcaption>
 </figure>
 
 
@@ -136,7 +146,7 @@ We'll first create a "remote" version of the repository to push our changes to.
 Back in GitKraken:
 - In the left panel, click Remote → Add Remote
 - Name it origin (conventional default)
-- Paste the GitHub URL, confir
+- Paste the GitHub URL, confirm
 
 
 <figure>
@@ -198,8 +208,8 @@ Now let's see what happens if the changes to a certain file do not match between
  
  
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="300">
-  <figcaption>Figure: Conflict resolution view </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo">
+  <figcaption>Figure: Conflict warning </figcaption>
 </figure>
 
 #### Step 11: Resolve a Merge Conflict in GitKraken
@@ -221,8 +231,8 @@ Resolving conflicts ensures both sets of changes are merged without losing data.
 - Finally, commit the merge using the Commit panel, and click Push to update GitHub
 
  <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_resolution.png?raw=true" alt="Init a repo" width="800" height="300">
-  <figcaption>Figure: Conflict warning </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_resolution.png?raw=true" alt="Init a repo">
+  <figcaption>Figure: Conflict resolution view </figcaption>
 </figure>
 
 

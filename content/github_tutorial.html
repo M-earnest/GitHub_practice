@@ -517,13 +517,22 @@ In this section, you’ll learn how to create a Git repository using GitKraken, 
 <p>Staging gives you control over what file/change to include in each commit-snapshot.</p>
 <p>In GitKraken:</p>
 <ul class="simple">
-<li><p>Click the checkbox next to <a class="reference external" href="http://README.md">README.md</a> to stage it</p></li>
+<li><p>Click the checkbox next to ice_cream.md to stage it</p></li>
 </ul>
 <figure>
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/staging.png?raw=true" alt="Init a repo" width="200" height="600">
   <figcaption>Figure: Staging changes </figcaption>
 </figure>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Tip: Creating and Managing a <strong>.gitignore</strong> File</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To prevent unnecessary, large or system-generated files (like <code class="docutils literal notranslate"><span class="pre">.DS_Store</span></code> on macOS or temporary Jupyter notebook checkpoints) from being tracked by Git, use a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">In your project folder, create a file named <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
+<li><p class="sd-card-text">Add file or folder names you want Git to ignore</p></li>
+</ol>
+</div>
+</details></section>
 <section id="step-4-commit-the-change">
 <h4>Step 4: Commit the Change<a class="headerlink" href="#step-4-commit-the-change" title="Permalink to this heading">#</a></h4>
 <p>A commit is a saved version of the project and it’s contents. You’ll now see it in the commit graph (visual log of a repository’s history)</p>
@@ -535,8 +544,8 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <li><p>Rinse and repeat for every new, meaningful change</p></li>
 </ul>
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/commiting.png?raw=true" alt="Init a repo" width="200" height="600">
-  <figcaption>Figure: Committing changes </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/updated_history.png?raw=true" alt="Init a repo" >
+  <figcaption>Figure: Commit history</figcaption>
 </figure>
 </section>
 </section>
@@ -565,7 +574,7 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <ul class="simple">
 <li><p>In the left panel, click Remote → Add Remote</p></li>
 <li><p>Name it origin (conventional default)</p></li>
-<li><p>Paste the GitHub URL, confir</p></li>
+<li><p>Paste the GitHub URL, confirm</p></li>
 </ul>
 <figure>
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/add_remote.png?raw=true" alt="Init a repo" width="600" height="400">
@@ -627,8 +636,8 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <li><p>GitKraken will detect the conflicting changes and show a merge conflict notification</p></li>
 </ul>
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="300">
-  <figcaption>Figure: Conflict resolution view </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo">
+  <figcaption>Figure: Conflict warning </figcaption>
 </figure>
 </section>
 <section id="step-11-resolve-a-merge-conflict-in-gitkraken">
@@ -654,8 +663,8 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <li><p>Finally, commit the merge using the Commit panel, and click Push to update GitHub</p></li>
 </ul>
  <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_resolution.png?raw=true" alt="Init a repo" width="800" height="300">
-  <figcaption>Figure: Conflict warning </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_resolution.png?raw=true" alt="Init a repo">
+  <figcaption>Figure: Conflict resolution view </figcaption>
 </figure>
 <hr class="docutils" />
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
