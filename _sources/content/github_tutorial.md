@@ -87,7 +87,12 @@ Staging gives you control over what file/change to include in each commit-snapsh
 In GitKraken:
 - Click the checkbox next to README.md to stage it
 
-screenshot - staging
+
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/staging.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Staging changes </figcaption>
+</figure>
+
 #### Step 4: Commit the Change
 A commit is a saved version of the project and it's contents. You’ll now see it in the commit graph (visual log of a repository’s history)
 
@@ -98,7 +103,12 @@ A commit is a saved version of the project and it's contents. You’ll now see i
 - Click Commit Changes
 - Rinse and repeat for every new, meaningful change
 
-screenshot - comitting
+
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/commiting.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Committing changes </figcaption>
+</figure>
+
 
 ### Local to Remote:
 
@@ -114,7 +124,6 @@ We'll first create a "remote" version of the repository to push our changes to.
 - Click Create Repository
 - Copy the URL (e.g., https://github.com/yourusername/repo_name.git)
 
-screenshot - create_repo
 
 <figure>
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/create_repo.png?raw=true" alt="Init a repo" width="600" height="400">
@@ -130,7 +139,10 @@ Back in GitKraken:
 - Paste the GitHub URL, confir
 
 
-screenshot - add_remote
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/add_remote.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Connecting a remote repository </figcaption>
+</figure>
 
 #### Step 7: Push to GitHub
 - Click the Push button (top toolbar).
@@ -170,7 +182,9 @@ Now let's see what happens if the changes to a certain file do not match between
 - Go to your repository on GitHub.com and open ice_cream.md
 - Click the ✏️ Edit button, make a small change (e.g., add a new ice cream flavor), and commit directly to the main branch
 
-screenshot - edit_online
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/edit_online.png?raw=true" alt="Init a repo" width="600" height="400">
+</figure>
 
 **Local Edit**
 - Without pulling the remote change, open ice_cream.md locally and make a different change to the same section of the file
@@ -182,7 +196,11 @@ screenshot - edit_online
 - GitKraken will detect the conflicting changes and show a merge conflict notification
 
  
- screenshot conflict_warning
+ 
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Conflict warning </figcaption>
+</figure>
 
 #### Step 11: Resolve a Merge Conflict in GitKraken
 
@@ -202,7 +220,13 @@ Resolving conflicts ensures both sets of changes are merged without losing data.
 - Once resolved, click Mark as Resolved.
 - Finally, commit the merge using the Commit panel, and click Push to update GitHub
 
-- screenshot merge_conflict
+ 
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/merge_conflict.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Resolving merge conflicts offline </figcaption>
+</figure>
+
+
 --------------------------------------------------------------------------
 
 ```{dropdown} ### Git for terminal wizards
