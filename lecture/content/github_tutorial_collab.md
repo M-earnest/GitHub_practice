@@ -34,7 +34,10 @@ Each participant should already have a file ice_cream.md in their repo, containi
 - In the top-right, click the “Fork” button.
     - GitHub will create a copy of the repo under your own username.
 
-screenshot - fork_repo
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/fork_repo.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Forking a repository </figcaption>
+</figure>
 
 You’re redirected to your new fork:
  https://github.com/your-username/ice-cream-prefs
@@ -46,8 +49,11 @@ You’re redirected to your new fork:
 - Choose a folder to save it locally
 - Click Clone the repo
 
-screenshot - clone_repo
 
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/clone_repo.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Forking a repository </figcaption>
+</figure>
 
 You now have a local copy of the forked repo, ready to work on.
 
@@ -89,9 +95,17 @@ A pull request lets you propose changes from your fork back to the original repo
 - Confirm that the pull request will go from your fork to the host’s main repository
 - Fill in the pull request form: Add a meaningful title + desription
 
-- screenshot - open_pr
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/open_pr.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Opening a pull request </figcaption>
+</figure>
 
-- screenshot - pull_request
+
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/pull_request.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Forking a repository </figcaption>
+</figure>
+
 
 
 ```{dropdown} Pull Request Template
@@ -124,7 +138,12 @@ While the pull request is still open:
 
 At this point, do not merge the pull request yet. Instead, we'll use this as an opportunity to review the conflict and prepare to resolve it.
 
-screenshot - merge_conflict
+
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/merge_conflict.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Merge conflict warning </figcaption>
+</figure>
+
 
 ### Step 7: Resolving conflicts
 - Click "Resolve conflicts".
@@ -140,7 +159,12 @@ contributor's version
 ```
 
 
-screenshot - resolve_conflict
+
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/resolve_merge.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Merge conflict warning </figcaption>
+</figure>
+
 
 We'll edit the file to combine both changes into a clean, final version, remove the conflict markers and make sure the file looks correct.
 
@@ -150,7 +174,12 @@ Once you're done:
 - Finally, click "Merge pull request" and confirm the merge
 
 
-screenshot - resolve_pr
+
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/resolve_pr.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Merge conflict warning </figcaption>
+</figure>
+
 --------------------------------------------------------------------------
 
 ## Additional content - Managing projects via GitHub
@@ -170,7 +199,10 @@ Projects are usually organized as boards with columns. The default setup looks l
 - In Review – code under review or waiting for feedback
 - Done – completed tasks
 
-screenshot - project_card
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/project_card.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Project View </figcaption>
+</figure>
 
 
 Each item on the board can be:
@@ -193,7 +225,11 @@ Creating a new project:
 1. Open the project page
 2. Click **Settings** → **Collaborators**
 
-screenshot - project_settings
+<figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/project_settings.png?raw=true" alt="Init a repo" width="600" height="400">
+  <figcaption>Figure: Project settings </figcaption>
+</figure>
+
 
 3. Add members of your organization by typing their GitHub username
 4. Assign permissions:
