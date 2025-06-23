@@ -230,7 +230,6 @@ Resolving conflicts ensures both sets of changes are merged without losing data.
 
 ```{dropdown} Git for terminal wizards
 :icon: info
-:open:
 
 Git is foremost a command line tool, therefore it is quite easy to setup and manage projects directly.
 If you are already are confident in working with the command-line interface, using pure git might be faster and more reproducible. Here are the steps above as you'd implement them. 
