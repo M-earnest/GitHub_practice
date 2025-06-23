@@ -627,8 +627,8 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <li><p>GitKraken will detect the conflicting changes and show a merge conflict notification</p></li>
 </ul>
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="200">
-  <figcaption>Figure: Conflict warning </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="300">
+  <figcaption>Figure: Conflict resolution view </figcaption>
 </figure>
 </section>
 <section id="step-11-resolve-a-merge-conflict-in-gitkraken">
@@ -660,23 +660,25 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <hr class="docutils" />
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">### Git for terminal wizards</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Git for terminal wizards</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Git is foremost a command line tool, therefore it is quite easy to setup and manage projects directly.
 If you are already are confident in working with the command-line interface, using pure git might be faster and more reproducible. Here are the steps above as you’d implement them.</p>
-<h5 class="rubric" id="create-your-project-folder">1. Create your project folder</h5>
-<p class="sd-card-text">mkdir my-icecream_project
-cd my-icecream_project</p>
-<h5 class="rubric" id="initialize-a-git-repo">2. Initialize a git repo</h5>
-<p class="sd-card-text">git init</p>
-<h5 class="rubric" id="add-your-files-to-staging-or-use-to-add-everything">3. Add your files to staging (or use ‘.’ to add everything)</h5>
-<p class="sd-card-text">git add .
-touch ice_cream.md</p>
-<h5 class="rubric" id="commit-the-files">4. Commit the files</h5>
-<p class="sd-card-text">git commit -m “Initial commit”</p>
-<h5 class="rubric" id="add-the-remote-repository-replace-with-your-github-repo-url">5. Add the remote repository (replace with your GitHub repo URL)</h5>
-<p class="sd-card-text">git remote add origin <a class="github reference external" href="https://github.com/your-username/my-icecream_project.git">your-username/my-icecream_project.git</a></p>
-<h5 class="rubric" id="push-to-the-remote-assumes-your-local-branch-is-named-main">6. Push to the remote (assumes your local branch is named ‘main’)</h5>
-<p class="sd-card-text">git push -u origin main</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Create your project folder
+mkdir my-icecream_project
+cd my-icecream_project</p></li>
+<li><p class="sd-card-text">Initialize a git repo
+git init</p></li>
+<li><p class="sd-card-text">Add your files to staging (or use ‘.’ to add everything)
+git add .
+touch ice_cream.md</p></li>
+<li><p class="sd-card-text">Commit the files
+git commit -m “Initial commit”</p></li>
+<li><p class="sd-card-text">Add the remote repository (replace with your GitHub repo URL)
+git remote add origin <a class="github reference external" href="https://github.com/your-username/my-icecream_project.git">your-username/my-icecream_project.git</a></p></li>
+<li><p class="sd-card-text">Push to the remote (assumes your local branch is named ‘main’)
+git push -u origin main</p></li>
+</ol>
 </div>
 </details></section>
 </section>
