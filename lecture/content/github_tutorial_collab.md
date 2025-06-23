@@ -52,7 +52,7 @@ You’re redirected to your new fork:
 
 <figure>
   <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/clone_repo.png?raw=true" alt="Init a repo" width="600" height="400">
-  <figcaption>Figure: Forking a repository </figcaption>
+  <figcaption>Figure: Cloning a repository </figcaption>
 </figure>
 
 You now have a local copy of the forked repo, ready to work on.
@@ -96,14 +96,13 @@ A pull request lets you propose changes from your fork back to the original repo
 - Fill in the pull request form: Add a meaningful title + desription
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/open_pr.png?raw=true" alt="Init a repo" width="600" height="400">
-  <figcaption>Figure: Opening a pull request </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/open_pr.png?raw=true" alt="Init a repo" width="600" height="300">
 </figure>
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/pull_request.png?raw=true" alt="Init a repo" width="600" height="400">
-  <figcaption>Figure: Forking a repository </figcaption>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/pull_request.png?raw=true" alt="Init a repo" width="600" height="300">
+  <figcaption>Figure: Opening a pull request </figcaption>
 </figure>
 
 
@@ -176,7 +175,7 @@ Once you're done:
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/resolve_pr.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/resolve_pr.png?raw=true" alt="Init a repo">
   <figcaption>Figure: Merge conflict warning </figcaption>
 </figure>
 
@@ -200,7 +199,7 @@ Projects are usually organized as boards with columns. The default setup looks l
 - Done – completed tasks
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/project_card.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/project_card.png?raw=true" alt="Init a repo" >
   <figcaption>Figure: Project View </figcaption>
 </figure>
 
@@ -226,7 +225,7 @@ Creating a new project:
 2. Click **Settings** → **Collaborators**
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/project_settings.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/project_settings.png?raw=true" alt="Init a repo" >
   <figcaption>Figure: Project settings </figcaption>
 </figure>
 
