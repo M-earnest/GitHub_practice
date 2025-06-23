@@ -70,7 +70,7 @@ In this section, you’ll learn how to create a Git repository using GitKraken, 
 This creates a local Git repository. GitKraken automatically tracks changes in that initialized folder. You’ll now see the main branch and an empty commit history.
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/init_repo.png?raw=true" alt="Init a repo" width="200" height="600">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/init_repo.png?raw=true" alt="Init a repo" width="600" height="400">
   <figcaption>Figure: Initializing a new GitHub repository </figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ A commit is a saved version of the project and it's contents. You’ll now see i
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/commiting.png?raw=true" alt="Init a repo" width="600" height="400">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/commiting.png?raw=true" alt="Init a repo" width="200" height="600">
   <figcaption>Figure: Committing changes </figcaption>
 </figure>
 
@@ -126,7 +126,7 @@ We'll first create a "remote" version of the repository to push our changes to.
 
 
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/create_repo.png?raw=true" alt="Init a repo" width="600" height="500">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/create_repo.png?raw=true" alt="Init a repo" width="500" height="500">
   <figcaption>Figure: Initializing a new GitHub repository </figcaption>
 </figure>
 
@@ -198,7 +198,7 @@ Now let's see what happens if the changes to a certain file do not match between
  
  
 <figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="300">
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_warning.png?raw=true" alt="Init a repo" width="800" height="200">
   <figcaption>Figure: Conflict warning </figcaption>
 </figure>
 
@@ -220,10 +220,9 @@ Resolving conflicts ensures both sets of changes are merged without losing data.
 - Once resolved, click Mark as Resolved.
 - Finally, commit the merge using the Commit panel, and click Push to update GitHub
 
- 
-<figure>
-  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/merge_conflict.png?raw=true" alt="Init a repo" width="400" height="200">
-  <figcaption>Figure: Resolving merge conflicts offline </figcaption>
+ <figure>
+  <img src="https://github.com/M-earnest/GitHub_practice/blob/main/lecture/static/conflict_resolution.png?raw=true" alt="Init a repo" width="800" height="300">
+  <figcaption>Figure: Conflict warning </figcaption>
 </figure>
 
 
