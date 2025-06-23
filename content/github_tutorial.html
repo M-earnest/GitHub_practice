@@ -443,14 +443,14 @@ document.write(`
 <p>A distributed version-control system (Git) hosted on a collaboration platform (GitHub) provides a rigorous provenance backbone. It allows us to maintain a history of our projects, collaborate with others, make our work transparent and share it with the world.</p>
 <section id="why-git-and-github">
 <h3>Why Git and GitHub?<a class="headerlink" href="#why-git-and-github" title="Permalink to this heading">#</a></h3>
-<p>Git as a version control system :</p>
+<p><strong>Git as a version control system:</strong></p>
 <ul class="simple">
 <li><p>tracks exactly what was changed, when, and by whom.</p></li>
 <li><p>creates a complete lineage of changes across branches, forks and collaborators, i.e the “commit history”</p></li>
 <li><p>gives the ability to revert/review the state of a project to any past point in time</p></li>
 <li><p>command line based or integration with tools like GitKraken for visual workflows.</p></li>
 </ul>
-<p>GitHub builds on Git to support:</p>
+<p><strong>GitHub builds on Git to support:</strong></p>
 <ul class="simple">
 <li><p>Secure cloud-based backup and access</p></li>
 <li><p>Collaboration through branching, pull requests, code reviews.</p></li>
@@ -483,16 +483,12 @@ Fetches the latest changes from a remote repository and merges them into your lo
 Creates a personal copy of someone else’s repository on your GitHub account. Used when you don’t have write access to the original.</p>
 <p class="sd-card-text"><strong>Branch</strong><br />
 A parallel version of the project where you can develop features or fixes without affecting the main code. Useful for working on isolated changes.</p>
-<p class="sd-card-text"><strong>Checkout</strong><br />
-Switches your working directory to a different branch or commit. Use this to move between different lines of development.</p>
-<p class="sd-card-text"><strong>Fetch</strong><br />
-Downloads the latest changes from a remote repository, but does <strong>not</strong> merge them into your local branches. Useful for reviewing remote activity before applying it.</p>
 </div>
 </details></section>
 <section id="practice-workflow-version-control-using-gitkraken">
 <h3>Practice: Workflow — Version control using GitKraken<a class="headerlink" href="#practice-workflow-version-control-using-gitkraken" title="Permalink to this heading">#</a></h3>
 <p>Let’s jump into practice. We’ll learn the relevant functions and terms along the way.</p>
-<p><strong>Goal</strong>
+<p><strong>Goal:</strong>
 In this section, you’ll learn how to create a Git repository using GitKraken, make your first commit, and push it to GitHub.</p>
 <section id="step-1-initialize-a-local-repository">
 <h4>Step 1: Initialize a Local Repository<a class="headerlink" href="#step-1-initialize-a-local-repository" title="Permalink to this heading">#</a></h4>
@@ -503,6 +499,7 @@ In this section, you’ll learn how to create a Git repository using GitKraken, 
 <li><p>Name the repo ‘my-icecream_project’ and confirm</p></li>
 </ul>
 <p>This creates a local Git repository. GitKraken automatically tracks changes in that initialized folder. You’ll now see the main branch and an empty commit history.</p>
+<p>screenshot - init_repo</p>
 </section>
 <section id="step-2-add-a-file-to-your-project">
 <h4>Step 2: Add a File to Your Project<a class="headerlink" href="#step-2-add-a-file-to-your-project" title="Permalink to this heading">#</a></h4>
@@ -520,6 +517,7 @@ In this section, you’ll learn how to create a Git repository using GitKraken, 
 <ul class="simple">
 <li><p>Click the checkbox next to <a class="reference external" href="http://README.md">README.md</a> to stage it</p></li>
 </ul>
+<p>screenshot - staging</p>
 </section>
 <section id="step-4-commit-the-change">
 <h4>Step 4: Commit the Change<a class="headerlink" href="#step-4-commit-the-change" title="Permalink to this heading">#</a></h4>
@@ -531,6 +529,7 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <li><p>Click Commit Changes</p></li>
 <li><p>Rinse and repeat for every new, meaningful change</p></li>
 </ul>
+<p>screenshot - comitting</p>
 </section>
 </section>
 <section id="local-to-remote">
@@ -541,12 +540,13 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <p>We’ll first create a “remote” version of the repository to push our changes to.</p>
 <ul class="simple">
 <li><p>Go to <a class="github reference external" href="https://github.com">github</a></p></li>
-<li><p>Click “New Repository”</p></li>
+<li><p>click + → “New Repository”</p></li>
 <li><p>Give it the same name as your local repository</p></li>
 <li><p>Leave it empty (no README or license)</p></li>
 <li><p>Click Create Repository</p></li>
 <li><p>Copy the URL (e.g., <a class="github reference external" href="https://github.com/yourusername/repo_name.git">yourusername/repo_name.git</a>)</p></li>
 </ul>
+<p>screenshot - create_repo</p>
 </section>
 <section id="step-6-connect-gitkraken-to-the-remote-repository">
 <h4>Step 6: Connect GitKraken to the Remote Repository<a class="headerlink" href="#step-6-connect-gitkraken-to-the-remote-repository" title="Permalink to this heading">#</a></h4>
@@ -554,8 +554,9 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <ul class="simple">
 <li><p>In the left panel, click Remote → Add Remote</p></li>
 <li><p>Name it origin (conventional default)</p></li>
-<li><p>Paste the GitHub URL, confirm</p></li>
+<li><p>Paste the GitHub URL, confir</p></li>
 </ul>
+<p>screenshot - add_remote</p>
 </section>
 <section id="step-7-push-to-github">
 <h4>Step 7: Push to GitHub<a class="headerlink" href="#step-7-push-to-github" title="Permalink to this heading">#</a></h4>
@@ -567,6 +568,7 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <p>The push sends your local commits to GitHub. You now have a fully synchronized local–remote setup.</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="version-control-and-conflicts">
 <h3>Version Control and conflicts<a class="headerlink" href="#version-control-and-conflicts" title="Permalink to this heading">#</a></h3>
 <p>Now that we have to separate instances of our project, we can simply work locally and push to GitHub whenever sensible. For collaboration and project work we might have multiple people contributing to the same remote repository. In the next steo we’ll illustrate the possible problems arising here and how to manage them.</p>
@@ -585,6 +587,7 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <h4>Step 9: Pull Changes from GitHub remote to local<a class="headerlink" href="#step-9-pull-changes-from-github-remote-to-local" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>In GitKraken, simply click the Pull button (top toolbar)</p></li>
+<li><p>your commit history will be updated with the new changes + information where these changes stem from (i.e. the remote repository)</p></li>
 <li><p>profit??</p></li>
 </ul>
 </section>
@@ -596,6 +599,7 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <li><p>Go to your repository on <a class="reference external" href="http://GitHub.com">GitHub.com</a> and open ice_cream.md</p></li>
 <li><p>Click the ✏️ Edit button, make a small change (e.g., add a new ice cream flavor), and commit directly to the main branch</p></li>
 </ul>
+<p>screenshot - edit_online</p>
 <p><strong>Local Edit</strong></p>
 <ul class="simple">
 <li><p>Without pulling the remote change, open ice_cream.md locally and make a different change to the same section of the file</p></li>
@@ -606,12 +610,13 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 <li><p>In GitKraken, click the Pull button.</p></li>
 <li><p>GitKraken will detect the conflicting changes and show a merge conflict notification</p></li>
 </ul>
+<p>screenshot conflict_warning</p>
 </section>
 <section id="step-11-resolve-a-merge-conflict-in-gitkraken">
 <h4>Step 11: Resolve a Merge Conflict in GitKraken<a class="headerlink" href="#step-11-resolve-a-merge-conflict-in-gitkraken" title="Permalink to this heading">#</a></h4>
 <p>Resolving conflicts ensures both sets of changes are merged without losing data. GitKraken’s visual tools make this process easier to understand and control.</p>
 <ul class="simple">
-<li><p>In the left panel, click the conflicted file ice_cream.md.</p></li>
+<li><p>In the right panel, click the conflicted file ice_cream.md.</p></li>
 <li><p>GitKraken will open a 3-way merge editor:</p>
 <ul>
 <li><p>The left side shows your local changes.</p></li>
@@ -628,6 +633,7 @@ Description: Added a ranking of my favorite icecream flavors</p></li>
 </li>
 <li><p>Once resolved, click Mark as Resolved.</p></li>
 <li><p>Finally, commit the merge using the Commit panel, and click Push to update GitHub</p></li>
+<li><p>screenshot merge_conflict</p></li>
 </ul>
 <hr class="docutils" />
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
